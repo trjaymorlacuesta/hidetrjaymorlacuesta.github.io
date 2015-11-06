@@ -1,0 +1,83 @@
+<h1 id="getuserdetails">getUserDetails</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This method allows users to retrieve stuff.</p>
+
+<table>
+	<tbody>
+	<tr>
+		<th>BSGv3</th>
+		<th>BSGv2</th>
+		<th>Show Additional Data Elements</th>
+	</tr>
+	<tr>
+		<td>No</td>
+		<td>Yes</td>
+		<td>-</td>
+	</tr>
+
+</tbody>
+</table>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+</ul>
+
+<table>
+	<tbody>
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>uid</td>
+		<td>TWISTUSER001</td>
+	</tr>
+	<tr>
+		<td>sid</td>
+		<td>2-4eed242594fc464787b8054ddc77de11</td>
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>getUserDetails</td>
+	</tr>
+	<tr>
+		<td>sid</td>
+		<td>-</td>
+	</tr>
+</tbody>
+</table>
+
+<div id="msgtesturl">
+<table>
+	<tbody>
+	<tr>
+		<th>Test URL MSG Agent -MSGSIT:</th>
+	</tr>
+	<tr>
+		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getUserDetails&amp;uid=TWISTUSER001&amp;sid=404-b9cae2209ddfbdf992e0ad54558716f3
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="response">Response</h3>
+
+<p>Success:
+<code>{
+    "response": {
+        "status": "success"
+    }
+}</code></p>
+
+<p>Error:
+<code>{
+    "response": {
+        "status": "error",
+        "description": "error.invalid.sessiontoken",
+        "message": "You cannot be authenticated. You have recently either logged in on a different device, or changed your password. Please login again."
+    }
+}</code></p>

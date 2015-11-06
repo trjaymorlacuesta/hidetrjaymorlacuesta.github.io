@@ -1,0 +1,106 @@
+<h1 id="sendemailsalesdata">sendEmailSalesData</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This method allows users to retrieve stuff.</p>
+
+<table>
+	<tbody>
+	<tr>
+		<th>BSGv3</th>
+		<th>BSGv2</th>
+		<th>Show Additional Data Elements</th>
+	</tr>
+	<tr>
+		<td>No</td>
+		<td>Yes</td>
+		<td>-</td>
+	</tr>
+
+</tbody>
+</table>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+</ul>
+
+<table>
+	<tbody>
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>uid</td>
+		<td>TWISTUSER001</td>
+	</tr>
+	<tr>
+		<td>sid</td>
+		<td>2-4eed242594fc464787b8054ddc77de11</td>
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>sendEmailSalesData</td>
+	</tr>
+	<tr>
+		<td>id</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td>address</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td>agentName</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td>agentFlag</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td>saleDate</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td>salePrice</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td>saleType</td>
+		<td>-</td>
+	</tr>
+</tbody>
+</table>
+
+<div id="msgtesturl">
+<table>
+	<tbody>
+	<tr>
+		<th>Test URL MSG Agent -MSGSIT:</th>
+	</tr>
+	<tr>
+		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&amp;op=sendEmailListingData&amp;id=7007111&amp;address=1 Turramurra Avenue Turramurra NSW 2074&amp;agentName=Robert Velasco&amp;agentFlag=true&amp;listingDate=7/1/2010&amp;listingPriceFrom=200000&amp;listingPriceTo=500000&amp;sid=2-4eed242594fc464787b8054ddc77de11
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="response">Response</h3>
+
+<p>Success:
+<code>{
+    "response": {
+        "status": "success"
+    }
+}</code></p>
+
+<p>Error:
+<code>{
+    "response": {
+        "status": "error",
+        "description": "error description"
+    }
+}</code></p>

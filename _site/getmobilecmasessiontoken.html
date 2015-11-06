@@ -1,0 +1,89 @@
+<h1 id="getmobilecmasessiontoken">getMobileCmaSessionToken</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This method allows users to retrieve stuff.</p>
+
+<table>
+	<tbody>
+	<tr>
+		<th>BSGv3</th>
+		<th>BSGv2</th>
+		<th>Show Additional Data Elements</th>
+	</tr>
+	<tr>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+	</tr>
+
+</tbody>
+</table>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+</ul>
+
+<table>
+	<tbody>
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>uid</td>
+		<td>TWISTUSER001</td>
+	</tr>
+	<tr>
+		<td>sid</td>
+		<td>2-4eed242594fc464787b8054ddc77de11</td>
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>getMobileCmaSessionToken</td>
+	</tr>
+	<tr>
+		<td>page</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td>propertyId</td>
+		<td>-</td>
+	</tr>
+</tbody>
+</table>
+
+<div id="msgtesturl">
+<table>
+	<tbody>
+	<tr>
+		<th>Test URL MSG Agent -MSGSIT:</th>
+	</tr>
+	<tr>
+		<td>https://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&amp;sid=2-4eed242594fc464787b8054ddc77de11&amp;op=getMobileCmaSessionToken&amp;username=bsguser.vivant&amp;password=RNPgN5bx&amp;appCode=rppipad&amp;page=8&amp;propertyId=3604024
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="response">Response</h3>
+
+<p>Success:
+<code>{
+    "response": {
+        "status": "success",
+        "result": {
+            "sessionToken": "https://rpp.rpdata.com/rpp/flow/avm.html?src=test&amp;timestamp=2015-11-03T16:28:36+10:00&amp;token=2-4eed242594fc464787b8054ddc77de11&amp;apiKey=a95607eba0d92ffdee24b3b13d2c1e899b868000&amp;hash=65c585c6feb682215f7752400fd59f3da9565b96"
+        }
+    }
+}</code></p>
+
+<p>Error:
+<code>{
+    "response": {
+        "status": "error",
+        "description": "error description"
+    }
+}</code></p>

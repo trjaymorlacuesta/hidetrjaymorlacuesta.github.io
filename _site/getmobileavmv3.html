@@ -1,0 +1,113 @@
+<h1 id="getmobileavmv3">getMobileAVMv3</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This method allows users to retrieve stuff.</p>
+
+<table>
+	<tbody>
+	<tr>
+		<th>BSGv3</th>
+		<th>BSGv2</th>
+		<th>Show Additional Data Elements</th>
+	</tr>
+	<tr>
+		<td>Yes</td>
+		<td>No</td>
+		<td>-</td>
+	</tr>
+
+</tbody>
+</table>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+</ul>
+
+<table>
+	<tbody>
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>uid</td>
+		<td>TWISTUSER001</td>
+	</tr>
+	<tr>
+		<td>sid</td>
+		<td>2-4eed242594fc464787b8054ddc77de11</td>
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>getMobileAVMv3</td>
+	</tr>
+	<tr>
+		<td>propertyId</td>
+		<td>-</td>
+	</tr>
+</tbody>
+</table>
+
+<div id="msgtesturl">
+<table>
+	<tbody>
+	<tr>
+		<th>Test URL MSG Agent -MSGSIT:</th>
+	</tr>
+	<tr>
+		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getMobileAVMv3&amp;uid=TWISTUSER001&amp;sid=2-4eed242594fc464787b8054ddc77de11&amp;propertyId=7003499
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="response">Response</h3>
+
+<p>Success:
+<code>{
+    "response": {
+        "status": "success",
+        "result": {
+            "avmFaresDetail": {
+                "faresCode": "0",
+                "faresCondition": "SUCCESS",
+                "faresDescription": "SUCCESS",
+                "faresFSDScore": "8",
+                "faresReferenceId": "NSW:1446531200442-47484034",
+                "faresRunDate": "03/11/2015",
+                "faresScore": "90",
+                "faresValuationDate": "03/11/2015",
+                "faresValueEstimate": "1799385",
+                "faresValueHigh": "1937726",
+                "faresValueLow": "1661043",
+                "otmProperties": [
+                    "6312242",
+                    "6312333",
+                    "6313311",
+                    "6311902",
+                    "6313520",
+                    "6314108"
+                ],
+                "soldProperties": [
+                    "6312307",
+                    "6312935",
+                    "6313640",
+                    "6314504",
+                    "6313540",
+                    "6313676"
+                ]
+            }
+        }
+    }
+}</code></p>
+
+<p>Error:
+<code>{
+    "response": {
+        "status": "error",
+        "description": "error description"
+    }
+}</code></p>
