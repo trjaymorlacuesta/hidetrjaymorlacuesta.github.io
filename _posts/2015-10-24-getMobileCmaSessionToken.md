@@ -10,7 +10,7 @@ layout: nil
 # getMobileCmaSessionToken
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to generate a session token and by pass the login procedures of rpp site; the user need to pass the page.
 
 <table>
 	<tbody>
@@ -20,9 +20,9 @@ This method allows users to retrieve stuff.
 		<th>Show Additional Data Elements</th>
 	</tr>
 	<tr>
-		<td>-</td>
-		<td>-</td>
-		<td>-</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
 	</tr>
 
 </tbody>
@@ -36,27 +36,39 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileCmaSessionToken</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>page</td>
-		<td>-</td>
+		<td>Page</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>propertyId</td>
-		<td>-</td>
+		<td>Property Id</td>
+		<td>Yes</td>
+		
 	</tr>
 </tbody>
 </table>

@@ -10,7 +10,7 @@ layout: nil
 # getListingDescription
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch the advertisement listing description fields coming from property service of BSGv3 that aren't available on BSGv2.
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>Yes</td>
 		<td>No</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,27 +36,39 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getListingDescription</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>propertyId</td>
-		<td>-</td>
+		<td>Property Id</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>advertisementType</td>
-		<td>-</td>
+		<td>Advertisement Type</td>
+		<td>No</td>
+		
 	</tr>
 </tbody>
 </table>

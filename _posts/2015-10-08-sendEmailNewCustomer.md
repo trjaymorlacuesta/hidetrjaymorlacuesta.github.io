@@ -10,7 +10,7 @@ layout: nil
 # sendEmailNewCustomer
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to provide the given information to the Websales team.
 
 <table>
 	<tbody>
@@ -20,9 +20,9 @@ This method allows users to retrieve stuff.
 		<th>Show Additional Data Elements</th>
 	</tr>
 	<tr>
-		<td>-</td>
-		<td>-</td>
-		<td>-</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
 	</tr>
 
 </tbody>
@@ -36,35 +36,51 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>sendEmailNewCustomer</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>name</td>
-		<td>-</td>
+		<td>Customer Name</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>phone</td>
-		<td>-</td>
+		<td>Phone Number</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>email</td>
-		<td>-</td>
+		<td>Email Address</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>date</td>
-		<td>-</td>
+		<td>Date</td>
+		<td>Yes</td>
+		
 	</tr>
 </tbody>
 </table>

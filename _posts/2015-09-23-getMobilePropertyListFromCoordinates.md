@@ -10,7 +10,9 @@ layout: nil
 # getMobilePropertyListFromCoordinates
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch all property details within the given radius using BSGv2's Search method. Results can be filtered by the status of the property such as for sale, for rent or sales. 
+
+When the showAdditionalDataElements is true, it will use the BSGv3's property service to show the additional fields that aren't available on BSGv2.
 
 <table>
 	<tbody>
@@ -36,151 +38,225 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+        <th>Description</th>
+        <th>Required</th>
+        
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+        <td>User ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+        <td>Session ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobilePropertyListFromCoordinates</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>lon</td>
-		<td>-</td>
+		<td>Longitude</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>lat</td>
-		<td>-</td>
+		<td>Latitude</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>radius</td>
-		<td>-</td>
+		<td>Radius</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>maxResult</td>
-		<td>-</td>
+		<td>Maximum Result</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>priceMin</td>
-		<td>-</td>
+		<td>Price Minimum</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>priceMax</td>
-		<td>-</td>
+		<td>Price Maximum</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>bedrooms</td>
-		<td>-</td>
+		<td>Number of Bedrooms</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>bathrooms</td>
-		<td>-</td>
+		<td>Number of Bathrooms</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>parking</td>
-		<td>-</td>
+		<td>Parking</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>landSize</td>
-		<td>-</td>
+		<td>Land Size</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>floorSize</td>
-		<td>-</td>
+		<td>Floor Size</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>capitalValueMax</td>
-		<td>-</td>
+		<td>Capital Value Maximum</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>capitalValueMin</td>
-		<td>-</td>
+		<td>Capital Value Minimum</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>listedDays</td>
-		<td>-</td>
+		<td>Listed Days</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>soldDays</td>
-		<td>-</td>
+		<td>Sold Days</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>house</td>
-		<td>-</td>
+		<td>Having House Property Type</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>unit</td>
-		<td>-</td>
+		<td>Having Unit Property Type</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>commercial</td>
-		<td>-</td>
+		<td>Commercial</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>land</td>
-		<td>-</td>
+		<td>Land</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>others</td>
-		<td>-</td>
+		<td>Others</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>ignorePastSales</td>
-		<td>-</td>
+		<td>Ignore Past Sales</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>recentlySold</td>
-		<td>-</td>
+		<td>Recently Sold</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>forSale</td>
-		<td>-</td>
+		<td>For Sale</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>other</td>
-		<td>-</td>
+		<td>Other</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>forRentOnly</td>
-		<td>-</td>
+		<td>for Rent Only</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>displayUnits</td>
-		<td>-</td>
+		<td>Display Units</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>street</td>
-		<td>-</td>
+		<td>Street</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>pageNumber</td>
-		<td>-</td>
+		<td>Page Number</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>pageSize</td>
-		<td>-</td>
+		<td>Page Size</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>isSortedByAddress</td>
-		<td>-</td>
+		<td>Is Sorted By Address</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>showAdditionalDataElements</td>
-		<td>-</td>
+		<td>Show Additional Data Elements</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>sortBy</td>
-		<td>-</td>
+		<td>Sort By</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>sortOrder</td>
-		<td>-</td>
+		<td>Sort Order</td>
+        <td>No</td>
+        
 	</tr>
 </tbody>
 </table>

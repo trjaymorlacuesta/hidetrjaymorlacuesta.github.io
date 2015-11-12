@@ -1,7 +1,7 @@
 <h1 id="getmobilerentalavm">getMobileRentalAvm</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This method allows users to retrieve stuff.</p>
+<p>This call is used to fetch rental automated valuation model (RAVM) for residential property (Houses &amp; Units) that includes the rental estimate, rental range, confidence score and forecast standard deviation (FSD) along with a list of comparable property IDs; it uses rental avm service under BSGv3.</p>
 
 <table>
 	<tbody>
@@ -13,7 +13,7 @@
 	<tr>
 		<td>Yes</td>
 		<td>No</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -29,23 +29,33 @@
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileRentalAvm</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>propertyId</td>
-		<td>-</td>
+		<td>Property Id</td>
+		<td>Yes</td>
+		
 	</tr>
 </tbody>
 </table>

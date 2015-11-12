@@ -10,7 +10,7 @@ layout: nil
 # getMobileTransactionDetailsByName
 
 ##Overview
-This method allows users to retrieve stuff.
+This call will return transactions' transfer and related property information for the name searched i.e. will find all transactions which a person or company was involved in either as buyer or seller.
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>No</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,59 +36,87 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileTransactionDetailsByName</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>firstName</td>
-		<td>-</td>
+		<td>First Name</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>lastName</td>
-		<td>-</td>
+		<td>Last Name</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>companyName</td>
-		<td>-</td>
+		<td>company Name</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>state</td>
-		<td>-</td>
+		<td>State</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>country</td>
-		<td>-</td>
+		<td>Country</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>firstNameBeginsWith</td>
-		<td>-</td>
+		<td>First Name Begins With</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>lastNameBeginsWith</td>
-		<td>-</td>
+		<td>Last Name Begins With</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>companyNameBeginsWith</td>
-		<td>-</td>
+		<td>Company Name Begins With</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>pageNumber</td>
-		<td>-</td>
+		<td>Page Number</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>pageSize</td>
-		<td>-</td>
+		<td>Page Size</td>
+		<td>No</td>
+		
 	</tr>
 </tbody>
 </table>

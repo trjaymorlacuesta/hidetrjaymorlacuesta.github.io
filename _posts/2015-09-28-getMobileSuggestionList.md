@@ -10,7 +10,7 @@ layout: nil
 # getMobileSuggestionList
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch suggestion list that matches the search term; it uses suggest service under BSGv2.
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>No</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,31 +36,45 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileSuggestionList</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>suggestion</td>
-		<td>-</td>
+		<td>Suggestion Keyword</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>category</td>
-		<td>-</td>
+		<td>Category</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>maxResult</td>
-		<td>-</td>
+		<td>Maximum Result</td>
+		<td>Yes</td>
+		
 	</tr>
 </tbody>
 </table>

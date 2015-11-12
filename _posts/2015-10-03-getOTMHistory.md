@@ -10,7 +10,7 @@ layout: nil
 # getOTMHistory
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch the for sale history of a specific property; it uses the BSGv3's property service under forSalePropertyCampaignList node and the BSGv3's for-sale-advertisements. 
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>No</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,27 +36,39 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getOTMHistory</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>id</td>
-		<td>-</td>
+		<td>Property ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>maxResult</td>
-		<td>-</td>
+		<td>Maximum Result</td>
+		<td>No</td>
+		
 	</tr>
 </tbody>
 </table>

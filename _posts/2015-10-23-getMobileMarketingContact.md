@@ -10,7 +10,7 @@ layout: nil
 # getMobileMarketingContact
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used when trying to access the marketing contact information. 
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>Yes</td>
 		<td>No</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,43 +36,63 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+        <th>Description</th>
+        <th>Required</th>
+        
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+        <td>User ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+        <td>Session ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileMarketingContact</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>propertyIds</td>
-		<td>-</td>
+		<td>Property Ids</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>insertedDate</td>
-		<td>-</td>
+		<td>Inserted Date</td>
+        <td>No</td>
+       
 	</tr>
 	<tr>
 		<td>homeOwner</td>
-		<td>-</td>
+		<td>Home Owner</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>canCall</td>
-		<td>-</td>
+		<td>Can Call</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>canMail</td>
-		<td>-</td>
+		<td>Can Mail</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>firstContact</td>
-		<td>-</td>
+		<td>First Contact</td>
+        <td>No</td>
+        
 	</tr>
 </tbody>
 </table>

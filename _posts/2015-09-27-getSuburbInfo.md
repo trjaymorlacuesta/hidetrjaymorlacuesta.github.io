@@ -10,7 +10,7 @@ layout: nil
 # getSuburbInfo
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch the different statistics, charts and statuses that are related to the searched suburb. 
 
 <table>
 	<tbody>
@@ -36,47 +36,69 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+        <th>Description</th>
+        <th>Required</th>
+        
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+        <td>User ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+        <td>Session ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getSuburbInfo</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>suburb</td>
-		<td>-</td>
+		<td>Suburb</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>state</td>
-		<td>-</td>
+		<td>State</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>postcode</td>
-		<td>-</td>
+		<td>Postcode</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>yearFrom</td>
-		<td>-</td>
+		<td>Year From</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>period</td>
-		<td>-</td>
+		<td>Period</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>displayChartUrl</td>
-		<td>-</td>
+		<td>Display Chart Url</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>displaySuburbStatistics</td>
-		<td>-</td>
+		<td>Display Suburb Statistics</td>
+        <td>No</td>
+        
 	</tr>
 </tbody>
 </table>

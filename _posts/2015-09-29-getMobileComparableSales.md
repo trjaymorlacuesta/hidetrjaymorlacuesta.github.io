@@ -10,7 +10,7 @@ layout: nil
 # getMobileComparableSales
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to obtain summary statistics and/or detailed property information for properties considered to be comparable to a target property; it uses BSGv2's comparable service
 
 <table>
 	<tbody>
@@ -36,51 +36,75 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+          <th>Description</th>
+          <th>Required</th>
+          
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+          <td>User ID</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+          <td>Session ID</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileComparableSales</td>
+          <td>Operation</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>suburb</td>
-		<td>-</td>
+		<td>Suburb</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>state</td>
-		<td>-</td>
+		<td>State</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>postcode</td>
-		<td>-</td>
+		<td>Postcode</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>maxResult</td>
-		<td>-</td>
+		<td>MaxResult</td>
+          <td>No</td>
+          
 	</tr>
 	<tr>
 		<td>type</td>
-		<td>-</td>
+		<td>Property Type</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>bedrooms</td>
-		<td>-</td>
+		<td>Number of Bedrooms</td>
+          <td>No</td>
+          
 	</tr>
 	<tr>
 		<td>bathrooms</td>
-		<td>-</td>
+		<td>Number of Bathrooms</td>
+          <td>No</td>
+          
 	</tr>
 	<tr>
 		<td>showAdditionalDataElements</td>
-		<td>-</td>
+		<td>Show Additional Data Elements</td>
+          <td>No</td>
+          
 	</tr>
 </tbody>
 </table>

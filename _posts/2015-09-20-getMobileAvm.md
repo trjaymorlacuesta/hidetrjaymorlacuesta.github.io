@@ -10,7 +10,9 @@ layout: nil
 # getMobileAvm
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch live automated valuation model (AVM) for a property that includes the valuation estimate, value range, confidence score and forecast standard deviation (FSD) along with a list of comparable property IDs; it uses under avm service under BSGv2.
+
+If appCode is rpm3 is passed as appCode, it will avm service under BSGv3.
 
 <table>
 	<tbody>
@@ -22,7 +24,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>Yes</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,23 +38,33 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileAvm</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>id</td>
-		<td>-</td>
+		<td>Property ID</td>
+		<td>Yes</td>
+		
 	</tr>
 </tbody>
 </table>

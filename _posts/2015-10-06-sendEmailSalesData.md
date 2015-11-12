@@ -10,7 +10,7 @@ layout: nil
 # sendEmailSalesData
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to provide the information of the given property id to the Aaextracts team.
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>No</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,47 +36,69 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>sendEmailSalesData</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>id</td>
-		<td>-</td>
+		<td>Property ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>address</td>
-		<td>-</td>
+		<td>Address</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>agentName</td>
-		<td>-</td>
+		<td>Agent Name</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>agentFlag</td>
-		<td>-</td>
+		<td>Agent Flag</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>saleDate</td>
-		<td>-</td>
+		<td>Sale Date</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>salePrice</td>
-		<td>-</td>
+		<td>Sale Price</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>saleType</td>
-		<td>-</td>
+		<td>Sale Type</td>
+		<td>No</td>
+		
 	</tr>
 </tbody>
 </table>

@@ -10,7 +10,7 @@ layout: nil
 # sendPropertyProfile
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch the property profile report of a particular property; it uses the BSGv2.
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>No</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,47 +36,69 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>sendPropertyProfile</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>propertyId</td>
-		<td>-</td>
+		<td>Property Id</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>bedroom</td>
-		<td>-</td>
+		<td>Number of Bedroom</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>bathroom</td>
-		<td>-</td>
+		<td>Number of Bathroom</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>carspace</td>
-		<td>-</td>
+		<td>Number of Carspace</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>email</td>
-		<td>-</td>
+		<td>Email Address</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>firstname</td>
-		<td>-</td>
+		<td>First Name</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>surname</td>
-		<td>-</td>
+		<td>Surname</td>
+		<td>No</td>
+		
 	</tr>
 </tbody>
 </table>

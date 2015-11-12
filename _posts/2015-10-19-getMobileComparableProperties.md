@@ -10,7 +10,7 @@ layout: nil
 # getMobileComparableProperties
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to obtain summary statistics and/or detailed property information for properties considered to be comparable to a target property; it uses BSGv3's comparable service
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>Yes</td>
 		<td>No</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,71 +36,105 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+        <th>Description</th>
+        <th>Required</th>
+        
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+        <td>User ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+        <td>Session ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileComparableProperties</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>propertyId</td>
-		<td>-</td>
+		<td>Property Id</td>
+        <td>Optional</td>
+        
 	</tr>
 	<tr>
 		<td>latitude</td>
-		<td>-</td>
+		<td>Latitude</td>
+        <td>Yes if propertyId is Null</td>
+        
 	</tr>
 	<tr>
 		<td>longitude</td>
-		<td>-</td>
+		<td>Longitude</td>
+        <td>Yes if propertyId is Null</td>
+        
 	</tr>
 	<tr>
 		<td>targetPropertyBedrooms</td>
-		<td>-</td>
+		<td>Target Property Bedrooms</td>
+        <td>Yes if propertyId is Null</td>
+        
 	</tr>
 	<tr>
 		<td>targetPropertyBathrooms</td>
-		<td>-</td>
+		<td>Target Property Bathrooms</td>
+        <td>Yes if propertyId is Null</td>
+        
 	</tr>
 	<tr>
 		<td>targetPropertyLandArea</td>
-		<td>-</td>
+		<td>Target Property Land Area</td>
+        <td>Yes if propertyId is Null</td>
+        
 	</tr>
 	<tr>
 		<td>targetPropertyPropertyType</td>
-		<td>-</td>
+		<td>Property Type of the Target Property</td>
+        <td>Yes if propertyId is Null</td>
+        
 	</tr>
 	<tr>
 		<td>targetPropertyCarSpaces</td>
-		<td>-</td>
+		<td>Target Property CarS paces</td>
+        <td>Yes if propertyId is Null</td>
+        
 	</tr>
 	<tr>
 		<td>limit</td>
-		<td>-</td>
+		<td>Limit of List to Display</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>comparableRuleId</td>
-		<td>-</td>
+		<td>Comparable Rule Id</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>returnStatisticsForComparableCategoryId</td>
-		<td>-</td>
+		<td>Return Statistics For Comparable Category Id</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>returnDetailForComparableCategoryId</td>
-		<td>-</td>
+		<td>Return Detail For Comparable Category Id</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>returnFields</td>
-		<td>-</td>
+		<td>Return Fields</td>
+        <td>No</td>
+        
 	</tr>
 </tbody>
 </table>

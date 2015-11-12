@@ -10,7 +10,7 @@ layout: nil
 # sendEmailListingData
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to provide the information of the given property id to the Otmreports team.
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>No</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,60 +36,93 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>sendEmailListingData</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>id</td>
-		<td>-</td>
+		<td>Property ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>address</td>
-		<td>-</td>
+		<td>Address</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>agentName</td>
-		<td>-</td>
+		<td>Agent Name</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>agentFlag</td>
-		<td>-</td>
+		<td>Agent Flag</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>listingPriceFrom</td>
-		<td>-</td>
+		<td>Listing Price From</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>listingPriceTo</td>
-		<td>-</td>
+		<td>listing Price To</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>listingDate</td>
-		<td>-</td>
+		<td>listing Date</td>
+		<td>Yes</td>
+		
 	</tr>
 </tbody>
 </table>
+
+<div id="msgtesturl">
+<table>
+	<tbody>
+	<tr>
+		<th>Test URL MSG Agent -MSGSIT:</th>
+	</tr>
+	<tr>
+		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&op=sendEmailListingData&sid=2-4eed242594fc464787b8054ddc77de11&id=7007111&address=1%20Turramurra%20Avenue%20Turramurra%20NSW%202074&agentName=Robert%20Velasco&listingPriceFrom=200000&listingPriceTo=500000&listingDate=7/1/2010
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
 
 ### Response
 
 Success:
 ```{
     "response": {
-        "status": "success",
-        "result": {
-            "results": "Results"
-        }
+        "status": "success"
     }
 }```
 

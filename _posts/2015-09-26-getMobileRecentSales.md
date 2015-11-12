@@ -10,7 +10,9 @@ layout: nil
 # getMobileRecentSales
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch properties that are recently sold on the given suburb using BSGv2's Search method. 
+
+When the showAdditionalDataElements is true, it will use the BSGv3's property service to show the additional fields that aren't available on BSGv2.
 
 <table>
 	<tbody>
@@ -36,43 +38,63 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+          <th>Description</th>
+          <th>Required</th>
+          
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+          <td>User ID</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+          <td>Session ID</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileRecentSales</td>
+          <td>Operation</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>suburb</td>
-		<td>-</td>
+		<td>Suburb</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>state</td>
-		<td>-</td>
+		<td>State</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>postcode</td>
-		<td>-</td>
+		<td>Postcode</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>maxResult</td>
-		<td>-</td>
+		<td>Maximum Result</td>
+          <td>No</td>
+          
 	</tr>
 	<tr>
 		<td>type</td>
-		<td>-</td>
+		<td>Property Type</td>
+          <td>No</td>
+          
 	</tr>
 	<tr>
 		<td>showAdditionalDataElements</td>
-		<td>-</td>
+		<td>Show Additional Data Elements</td>
+          <td>No</td>
+          
 	</tr>
 </tbody>
 </table>

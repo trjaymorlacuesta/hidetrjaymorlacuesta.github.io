@@ -10,7 +10,7 @@ layout: nil
 # getPropertyIDListFromSuggestion
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch suggestion list that matches the search term; it uses suggest service under BSGv3.
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>Yes</td>
 		<td>No</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,35 +36,51 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+        <th>Description</th>
+        <th>Required</th>
+        
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+        <td>User ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+        <td>Session ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getPropertyIDListFromSuggestion</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>searchTerm</td>
-		<td>-</td>
+		<td>Search Term</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>includeUnits</td>
-		<td>-</td>
+		<td>Include Units</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>suggestionTypes</td>
-		<td>-</td>
+		<td>Suggestion Types</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>limit</td>
-		<td>-</td>
+		<td>Limit List of Suggestions</td>
+        <td>Yes</td>
+        
 	</tr>
 </tbody>
 </table>

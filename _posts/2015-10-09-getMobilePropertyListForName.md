@@ -10,7 +10,7 @@ layout: nil
 # getMobilePropertyListForName
 
 ##Overview
-This method allows users to retrieve stuff.
+This method returns a list of property summary records for an owner's name; it uses BSGv2's getPropertySummaryListByNameSuburb under property service.
 
 <table>
 	<tbody>
@@ -22,7 +22,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>No</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,39 +36,57 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+        <th>Description</th>
+        <th>Required</th>
+        
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+        <td>User ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+        <td>Session ID</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobilePropertyListForName</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
 	</tr>
 	<tr>
 		<td>firstName</td>
-		<td>-</td>
+		<td>First Name</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>lastName</td>
-		<td>-</td>
+		<td>Last Name</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>suburb</td>
-		<td>-</td>
+		<td>Suburb</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>pageNumber</td>
-		<td>-</td>
+		<td>Page Number</td>
+        <td>No</td>
+        
 	</tr>
 	<tr>
 		<td>pageSize</td>
-		<td>-</td>
+		<td>Page Size</td>
+        <td>No</td>
+        
 	</tr>
 </tbody>
 </table>

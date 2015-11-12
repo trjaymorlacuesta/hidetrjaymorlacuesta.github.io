@@ -10,7 +10,9 @@ layout: nil
 # getMobileProperty
 
 ##Overview
-This method allows users to retrieve stuff.
+This call is used to fetch all property details of the given  search string, it can be full address search, street, suburb or postcode; it uses BSGv2's Search method. Results can be filtered by the status of the property such as for sale, for rent or sales. 
+
+When the showAdditionalDataElements is true, it will use the BSGv3's property service to show the additional fields that aren't available on BSGv2.
 
 <table>
 	<tbody>
@@ -22,7 +24,7 @@ This method allows users to retrieve stuff.
 	<tr>
 		<td>No</td>
 		<td>Yes</td>
-		<td>-</td>
+		<td></td>
 	</tr>
 
 </tbody>
@@ -36,119 +38,177 @@ This method allows users to retrieve stuff.
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+		<th>Description</th>
+		<th>Required</th>
+		
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+		<td>Session ID</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobileProperty</td>
+		<td>Operation</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>searchString</td>
-		<td>-</td>
+		<td>Search String</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>category</td>
-		<td>-</td>
+		<td>Category</td>
+		<td>Yes</td>
+		
 	</tr>
 	<tr>
 		<td>maxResult</td>
-		<td>-</td>
+		<td>Maximum Result</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>house</td>
-		<td>-</td>
+		<td>Having House Property Type</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>unit</td>
-		<td>-</td>
+		<td>Having Unit Property Type</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>commercial</td>
-		<td>-</td>
+		<td>Commercial</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>land</td>
-		<td>-</td>
+		<td>Land</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>others</td>
-		<td>-</td>
+		<td>Others</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>listedDays</td>
-		<td>-</td>
+		<td>Listed Days</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>soldDays</td>
-		<td>-</td>
+		<td>Sold Days</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>bedrooms</td>
-		<td>-</td>
+		<td>Number of Bedrooms</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>bathrooms</td>
-		<td>-</td>
+		<td>Number of Bathrooms</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>parking</td>
-		<td>-</td>
+		<td>Parking</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>landSize</td>
-		<td>-</td>
+		<td>Land Size</td>
+		<td>No</td>
+		<td></td>
 	</tr>
 	<tr>
 		<td>forSale</td>
-		<td>-</td>
+		<td>For Sale</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>recentlySold</td>
-		<td>-</td>
+		<td>Recently Sold</td>
+		<td>v</td>
+		
 	</tr>
 	<tr>
 		<td>forRentOnly</td>
-		<td>-</td>
+		<td>For RentOnly</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>other</td>
-		<td>-</td>
+		<td>Other</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>appCode</td>
-		<td>-</td>
+		<td>App Code</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>pageNumber</td>
-		<td>-</td>
+		<td>Page Number</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>pageSize</td>
-		<td>-</td>
+		<td>Page Size</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>groupUnits</td>
-		<td>-</td>
+		<td>Group Units</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>showAdditionalDataElements</td>
-		<td>-</td>
+		<td>Show Additional Data Elements</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>sortBy</td>
-		<td>-</td>
+		<td>Sort By</td>
+		<td>No</td>
+		
 	</tr>
 	<tr>
 		<td>sortOrder</td>
-		<td>-</td>
+		<td>Sort Order</td>
+		<td>No</td>
+		
 	</tr>
 </tbody>
 </table>

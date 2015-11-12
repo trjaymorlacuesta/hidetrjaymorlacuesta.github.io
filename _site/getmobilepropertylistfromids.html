@@ -1,7 +1,9 @@
 <h1 id="getmobilepropertylistfromids">getMobilePropertyListFromIds</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This method allows users to retrieve stuff.</p>
+<p>This call is used to fetch all property details of the given property ids, it uses BSGv2’s Search method. Results can be filtered by the status of the property such as for sale, for rent or sales.</p>
+
+<p>When the showAdditionalDataElements is true, it will use the BSGv3’s property service to show the additional fields that aren’t available on BSGv2.</p>
 
 <table>
 	<tbody>
@@ -29,35 +31,51 @@
 	<tbody>
 	<tr>
 		<th>Parameter</th>
-		<th>Value</th>
+          <th>Description</th>
+          <th>Required</th>
+          
 	</tr>
 	<tr>
 		<td>uid</td>
-		<td>TWISTUSER001</td>
+          <td>User ID</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>sid</td>
-		<td>2-4eed242594fc464787b8054ddc77de11</td>
+          <td>Session ID</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>op</td>
-		<td>getMobilePropertyListFromIds</td>
+          <td>Operation</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>ids</td>
-		<td>-</td>
+		<td>Property IDs</td>
+          <td>Yes</td>
+          
 	</tr>
 	<tr>
 		<td>showAdditionalDataElements</td>
-		<td>-</td>
+		<td>Show Additional DataElements</td>
+          <td>No</td>
+          
 	</tr>
 	<tr>
 		<td>sortBy</td>
-		<td>-</td>
+		<td>Sort By</td>
+          <td>No</td>
+          
 	</tr>
 	<tr>
 		<td>sortOrder</td>
-		<td>-</td>
+		<td>Sort Order</td>
+          <td>No</td>
+          
 	</tr>
 </tbody>
 </table>
