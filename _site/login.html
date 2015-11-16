@@ -25,9 +25,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -38,26 +36,26 @@
 		
 	</tr>
 	<tr>
-		<td>uid</td>
-		<td>User ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>passwd</td>
-		<td>Password</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>op</td>
 		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
 	<tr>
+		<td>uid</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
+	</tr>
+	<tr>
 		<td>user</td>
 		<td>User</td>
+		<td>Yes</td>
+		
+	</tr>
+	<tr>
+		<td>passwd</td>
+		<td>Password</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -70,30 +68,25 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER001&amp;op=login&amp;user=bsguser.rpmob3.apple&amp;passwd=bsgdevpass&amp;customerId=26233
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "login", 
+    "uid": "TWISTUSER001", 
+    "user": "bsguser.rpmob3.apple", 
+    "passwd": "bsgdevpass", 
+    "customerId": "26233"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success",
-        "customerId": "26233",
-        "userName": "RPData-BSG Staging (National-NoVIC)",
-        "authenticationCode": "21548-77a650021bc2cd8f72dc0c878e003647"
-    }
+  "response": {
+    "status": "success",
+    "customerId": "26233",
+    "userName": "RPData-BSG Staging (National-NoVIC)",
+    "authenticationCode": "21548-db14457172306d43dedf8a66f5f74eb2"
+  }
 }</code></p>
 
 <p>Error:

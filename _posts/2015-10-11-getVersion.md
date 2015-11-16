@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getVersion'
 title: 'getVersion'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to get the current version and build date of the app.
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -41,52 +41,38 @@ This call is used to get the current version and build date of the app.
 		
 	</tr>
 	<tr>
-		<td>uid</td>
-		<td>User ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>sid</td>
-		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>op</td>
 		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
+	<tr>
+		<td>uid</td>
+		<td>User ID</td>
+		<td>Yes</td>
+		
+	</tr>
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER001&op=getVersion
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getVersion",
+    "uid": "TWISTUSER001"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "version": "3.12",
-            "buildDate": "07-09-2015",
-            "buildNo": "5"
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "version": "3.13",
+      "buildDate": "12-11-2015",
+      "buildNo": "1"
     }
+  }
 }```
 
 Error:

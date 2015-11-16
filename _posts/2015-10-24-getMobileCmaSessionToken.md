@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getMobileCmaSessionToken'
 title: 'getMobileCmaSessionToken'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to generate a session token and by pass the login procedures o
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to generate a session token and by pass the login procedures o
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -49,12 +55,6 @@ This call is used to generate a session token and by pass the login procedures o
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -73,30 +73,28 @@ This call is used to generate a session token and by pass the login procedures o
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>https://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&sid=2-4eed242594fc464787b8054ddc77de11&op=getMobileCmaSessionToken&username=bsguser.vivant&password=RNPgN5bx&appCode=rppipad&page=8&propertyId=3604024
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getMobileCmaSessionToken",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+	"username": "bsguser.vivant",
+	"password": "RNPgN5bx",
+	"appCode": "rppipad",
+	"page": "8",
+	"propertyId": "3604024"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "sessionToken": "https://rpp.rpdata.com/rpp/flow/avm.html?src=test&timestamp=2015-11-03T16:28:36+10:00&token=2-4eed242594fc464787b8054ddc77de11&apiKey=a95607eba0d92ffdee24b3b13d2c1e899b868000&hash=65c585c6feb682215f7752400fd59f3da9565b96"
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "sessionToken": "https://rpp.rpdata.com/rpp/flow/avm.html?src=test&timestamp=2015-11-13T17:00:04+10:00&token=2-4eed242594fc464787b8054ddc77de11&apiKey=a95607eba0d92ffdee24b3b13d2c1e899b868000&hash=3c568aea2c3b3ffa6922d2bd65c63bd8d868bc87"
     }
+  }
 }```
 
 Error:

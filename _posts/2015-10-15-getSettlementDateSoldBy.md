@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getSettlementDateSoldBy'
 title: 'getSettlementDateSoldBy'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch the settlement date and sold by fields coming from pr
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to fetch the settlement date and sold by fields coming from pr
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -53,12 +59,6 @@ This call is used to fetch the settlement date and sold by fields coming from pr
 		
 	</tr>
 	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>propertyId</td>
 		<td>Property Id</td>
 		<td>Yes</td>
@@ -67,31 +67,25 @@ This call is used to fetch the settlement date and sold by fields coming from pr
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getSettlementDateSoldBy&uid=TWISTUSER001&sid=2-4eed242594fc464787b8054ddc77de11&propertyId=3604024
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getSettlementDateSoldBy",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "propertyId": "3604024"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "settlementDate": "27/04/2010",
-            "soldBy": "Hamilton & Co Lane Cove"
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "settlementDate": "27/04/2010",
+      "soldBy": "Hamilton & Co Lane Cove"
     }
+  }
 }```
 
 Error:

@@ -1,0 +1,57 @@
+<p>This will serve a guide on how to setup Postman to successfuly test/execute the MSG web services/api. 
+Postman is a Web REST client that allows you to enter and monitor HTTP requests and responses.
+This guide uses Postman Google Chrome Extension</p>
+
+<h3 id="steps">Steps:</h3>
+
+<h3 id="under-authorization-tab-select-basic-auth-in-the-dropdown-list">1. Under “Authorization” tab, select “Basic Auth” in the dropdown list.</h3>
+<div style="border: 1px solid #bfbfbf; margin-bottom: 50px;">
+    <img src="images/using_postman_auth.png" alt="using_postman_auth" />
+</div>
+
+<h3 id="input-the-username-and-password-credentials-provided-by-the-administratorsuper-user-then-click-the-update-request-button">2. Input the Username and Password credentials (provided by the Administrator/Super User). Then click the “Update request” button.</h3>
+<p><code>Username: msg
+Password: passwordmsg
+</code></p>
+<div style="border: 1px solid #bfbfbf; margin-bottom: 50px;">
+    <img src="images/using_postman_auth_input.png" alt="using_postman_auth_input" />
+</div>
+
+<h3 id="select-post-in-the-dropdown-list-located-above-the-tabs">3. Select “POST” in the dropdown list located above the tabs.</h3>
+<p><code>Method: POST</code></p>
+<div style="border: 1px solid #bfbfbf; margin-bottom: 50px;">
+    <img src="images/using_postman_dropdown_request.png" alt="using_postman_dropdown_request" />
+</div>
+
+<h3 id="input-the-request-url-path">4. Input the request URL path.</h3>
+<p><code>http://msg.rpdata.com/ttsvr/msg?</code></p>
+<div style="border: 1px solid #bfbfbf; margin-bottom: 50px;">
+    <img src="images/using_postman_url_request_path.png" alt="using_postman_url_request_path" />
+</div>
+
+<h3 id="under-the-body-tab-choose-raw-then-select-jsonapplicationjson-in-the-dropdown-list">5. Under the “Body” tab, choose “raw”. Then select “JSON(application/json)” in the dropdown list.</h3>
+<p><code>Request Body: raw
+Data Type: JSON(application/json)</code></p>
+<div style="border: 1px solid #bfbfbf; margin-bottom: 50px;">
+    <img src="images/using_postman_body.png" alt="using_postman_body" />
+</div>
+
+<h3 id="note">Note:</h3>
+<p>After Step 5, the “Headers” tab should be automaticaly updated with the following sample;
+<code>Authorization: Basic bXNnOkU3bVc6JTZ7REs=
+Content-Type: application/json</code></p>
+<div style="border: 1px solid #bfbfbf; margin-bottom: 50px;">
+    <img src="images/using_postman_headers_input.png" alt="using_postman_headers_input" />
+</div>
+
+<p>The input box under the “Boby” tab is where you place the request parameters. 
+See sample below;
+<code>{
+    "op": "getMobilePropertyAdditionalInfo",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "propertyId": "7764519"
+}</code></p>
+<div style="border: 1px solid #bfbfbf; margin-bottom: 50px;">
+    <img src="images/using_postman_body_paramaters.png" alt="using_postman_body_paramaters" />
+</div>

@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -31,6 +29,12 @@
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -42,12 +46,6 @@
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -96,27 +94,30 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&amp;op=sendEmailListingData&amp;id=7007111&amp;address=1 Turramurra Avenue Turramurra NSW 2074&amp;agentName=Robert Velasco&amp;agentFlag=true&amp;listingDate=7/1/2010&amp;listingPriceFrom=200000&amp;listingPriceTo=500000&amp;sid=2-4eed242594fc464787b8054ddc77de11
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "sendEmailListingData", 
+    "uid": "TWISTUSER003", 
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "id": "7007111", 
+    "address": "1 Turramurra Avenue Turramurra NSW 2074", 
+    "agentName": "Robert Velasco", 
+    "agentFlag": "true", 
+    "listingDate": "7/1/2010", 
+    "listingPriceFrom": "200000", 
+    "listingPriceTo": "500000"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success"
+  "response": {
+    "status": "success",
+    "result": {
+      "response": "true"
     }
+  }
 }</code></p>
 
 <p>Error:

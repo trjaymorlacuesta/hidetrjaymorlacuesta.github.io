@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getMobileTransactionDetailsByName'
 title: 'getMobileTransactionDetailsByName'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call will return transactions' transfer and related property information fo
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call will return transactions' transfer and related property information fo
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -49,12 +55,6 @@ This call will return transactions' transfer and related property information fo
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -121,51 +121,51 @@ This call will return transactions' transfer and related property information fo
 </tbody>
 </table>
 
-<div id="msgtesturl">
-	<table>
-		<tbody>
-		<tr>
-			<th>Test URL MSG Agent -MSGSIT:</th>
-		</tr>
-		<tr>
-			<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER001&sid=2-4eed242594fc464787b8054ddc77de11&op=getMobileTransactionDetailsByName&lastName=salway&firstName=michael%20allan&country=&state=nsw&country=AUS&firstNameBeginsWith=false&lastNameBeginsWith=false&companyNameBeginsWith=&false
-			</td>
-		</tr>
-	</tbody>
-	</table>
-</div>
+***Sample Request***
+```{
+    "op": "getMobileTransactionDetailsByName",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "lastName": "salway",
+    "firstName": "michael allan",
+    "state": "nsw",
+    "country": "AUS",
+    "firstNameBeginsWith": "false",
+    "lastNameBeginsWith": "false",
+    "companyNameBeginsWith": "false"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "transactionDetailsList": [
-                {
-                    "propertyId": 5243888,
-                    "transferId": 52443719,
-                    "currentOwner": false
-                },
-                {
-                    "propertyId": 5243888,
-                    "transferId": 52443720,
-                    "currentOwner": false
-                },
-                {
-                    "propertyId": 7823008,
-                    "transferId": 0,
-                    "currentOwner": true
-                },
-                {
-                    "propertyId": 7823008,
-                    "transferId": 53701452,
-                    "currentOwner": false
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "transactionDetailsList": [
+        {
+          "propertyId": 5243888,
+          "transferId": 52443719,
+          "currentOwner": false
+        },
+        {
+          "propertyId": 5243888,
+          "transferId": 52443720,
+          "currentOwner": false
+        },
+        {
+          "propertyId": 7823008,
+          "transferId": 0,
+          "currentOwner": true
+        },
+        {
+          "propertyId": 7823008,
+          "transferId": 53701452,
+          "currentOwner": false
         }
+      ]
     }
+  }
 }```
 
 Error:

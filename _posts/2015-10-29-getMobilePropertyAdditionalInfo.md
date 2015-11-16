@@ -1,8 +1,8 @@
 ---
 category: Web Service Calls
-path: '/msg/getMobilePropertyAdditionalInfo'
+path: '/msg?getMobilePropertyAdditionalInfo'
 title: 'getMobilePropertyAdditionalInfo'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -28,9 +28,9 @@ This call is used when the property details need to append the other fields comi
 </tbody>
 </table>
 
-### Request
+### Request 
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used when the property details need to append the other fields comi
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -53,12 +59,6 @@ This call is used when the property details need to append the other fields comi
 		
 	</tr>
 	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>propertyId</td>
 		<td>Property Id</td>
 		<td>Yes</td>
@@ -67,37 +67,32 @@ This call is used when the property details need to append the other fields comi
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getMobilePropertyAdditionalInfo&uid=TWISTUSER001&sid=2-4eed242594fc464787b8054ddc77de11&propertyId=7764519
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+
+```{
+    "op": "getMobilePropertyAdditionalInfo",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "propertyId": "7764519"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "occupancyType": "Owner Occupied",
-            "mapReference": "UBD NSW: CCT40, L4",
-            "folio": "",
-            "volume": "",
-            "saleDate": "17/09/2009",
-            "salePrice": "415000",
-            "siteValueLists": [ ],
-            "isAgentAdvised": false
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "occupancyType": "Owner Occupied",
+      "mapReference": "UBD NSW: CCT40, L4",
+      "folio": "",
+      "volume": "",
+      "saleDate": "17/09/2009",
+      "salePrice": "415000",
+      "siteValueLists": [],
+      "isAgentAdvised": false
     }
+  }
 }```
 
 Error:

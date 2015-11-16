@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getMobileSuggestionList'
 title: 'getMobileSuggestionList'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch suggestion list that matches the search term; it uses
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to fetch suggestion list that matches the search term; it uses
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -49,12 +55,6 @@ This call is used to fetch suggestion list that matches the search term; it uses
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -79,36 +79,32 @@ This call is used to fetch suggestion list that matches the search term; it uses
 </tbody>
 </table>
 
-<div id="msgtesturl">
-	<table>
-		<tbody>
-		<tr>
-			<th>Test URL MSG Agent -MSGSIT:</th>
-		</tr>
-		<tr>
-			<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getMobileSuggestionList&uid=8C5830F0-816A-54C5-9271-8F06AD36CE2D&suggestion=carlton&category=1&maxResult=20&sid=2-4eed242594fc464787b8054ddc77de11
-			</td>
-		</tr>
-	</tbody>
-	</table>
-</div>
+***Sample Request***
+```{
+    "op": "getMobileSuggestionList", 
+    "uid": "8C5830F0-816A-54C5-9271-8F06AD36CE2D", 
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "suggestion": "carlton", 
+    "category": "1", 
+    "maxResult": "20"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "suggestionList": [
-                {
-                    "suburb": "Carlton Street Newcastle",
-                    "state": "NSW",
-                    "postcode": "2300"
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "suggestionList": [
+        {
+          "suburb": "Carlton Street Newcastle",
+          "state": "NSW",
+          "postcode": "2300"
         }
+      ]
     }
+  }
 }```
 
 Error:

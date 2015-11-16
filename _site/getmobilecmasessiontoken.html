@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -31,6 +29,12 @@
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -42,12 +46,6 @@
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -66,30 +64,28 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>https://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&amp;sid=2-4eed242594fc464787b8054ddc77de11&amp;op=getMobileCmaSessionToken&amp;username=bsguser.vivant&amp;password=RNPgN5bx&amp;appCode=rppipad&amp;page=8&amp;propertyId=3604024
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "getMobileCmaSessionToken",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+	"username": "bsguser.vivant",
+	"password": "RNPgN5bx",
+	"appCode": "rppipad",
+	"page": "8",
+	"propertyId": "3604024"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success",
-        "result": {
-            "sessionToken": "https://rpp.rpdata.com/rpp/flow/avm.html?src=test&amp;timestamp=2015-11-03T16:28:36+10:00&amp;token=2-4eed242594fc464787b8054ddc77de11&amp;apiKey=a95607eba0d92ffdee24b3b13d2c1e899b868000&amp;hash=65c585c6feb682215f7752400fd59f3da9565b96"
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "sessionToken": "https://rpp.rpdata.com/rpp/flow/avm.html?src=test&amp;timestamp=2015-11-13T17:00:04+10:00&amp;token=2-4eed242594fc464787b8054ddc77de11&amp;apiKey=a95607eba0d92ffdee24b3b13d2c1e899b868000&amp;hash=3c568aea2c3b3ffa6922d2bd65c63bd8d868bc87"
     }
+  }
 }</code></p>
 
 <p>Error:

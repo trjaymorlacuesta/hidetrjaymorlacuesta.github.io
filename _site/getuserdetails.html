@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -33,6 +31,12 @@
 		<th>Required</th>
 		
 	</tr>
+    <tr>
+        <td>op</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
+    </tr>
 	<tr>
 		<td>uid</td>
 		<td>User ID</td>
@@ -45,37 +49,57 @@
 		<td>Yes</td>
 		
 	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-
-</tbody>
+    </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getUserDetails&amp;uid=TWISTUSER001&amp;sid=404-b9cae2209ddfbdf992e0ad54558716f3
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "getUserDetails", 
+    "uid": "TWISTUSER001", 
+    "sid": "2-4eed242594fc464787b8054ddc77de11"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success"
+  "response": {
+    "status": "success",
+    "result": {
+      "personalInformation": {
+        "username": "tan.tran",
+        "title": "MR",
+        "firstName": "Tan",
+        "lastName": "Tran",
+        "phoneNumber": "07 33725766",
+        "mobileNumber": "",
+        "emailAddress": "ttn@rpdata.com",
+        "faxNumber": "",
+        "photo": ""
+      },
+      "workInformation": {
+        "emailAddress": "ttn@rpdata.com",
+        "mobileNumber": "007",
+        "phoneNumber": "",
+        "faxNumber": ""
+      },
+      "agencyInformation": {
+        "tradename": "Tan Tran - Staff Account",
+        "address1": "C/- RP DATA",
+        "address2": "",
+        "suburb": "CLAYFIELD",
+        "postcode": "4011",
+        "state": "QLD",
+        "country": "AUS",
+        "phoneNumber": "07 38574411",
+        "website": "",
+        "faxNumber": "07 38574896",
+        "industrySegment": "ST",
+        "franchiseId": 48,
+        "logo": "https://rpp.rpdata.com/rpp/images/logos/prdnational.gif"
+      }
     }
+  }
 }</code></p>
 
 <p>Error:

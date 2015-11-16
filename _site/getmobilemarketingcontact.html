@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -33,6 +31,12 @@
         <th>Required</th>
         
 	</tr>
+  <tr>
+    <td>op</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
+  </tr>
 	<tr>
 		<td>uid</td>
         <td>User ID</td>
@@ -42,12 +46,6 @@
 	<tr>
 		<td>sid</td>
         <td>Session ID</td>
-        <td>Yes</td>
-        
-	</tr>
-	<tr>
-		<td>op</td>
-        <td>Operation</td>
         <td>Yes</td>
         
 	</tr>
@@ -90,162 +88,156 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getMobileMarketingContact&amp;propertyIds=15348008,15793615,1593403,15057202,3698774&amp;uid=TWISTUSER001&amp;sid=2-4eed242594fc464787b8054ddc77de11
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "getMobileMarketingContact",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "propertyIds": "15348008,15793615,1593403,15057202,3698774"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success",
-        "result": {
-            "marketingContacts": [
-                {
-                    "propertyId": 1593403,
-                    "contactType": "Marketing",
-                    "person": {
-                        "firstName": "Y",
-                        "middleNames": "",
-                        "initials": "Y",
-                        "lastName": "Cai"
-                    },
-                    "mailingAddress": {
-                        "careOf": "",
-                        "line1": "5477 Braidwood Rd",
-                        "line2": "",
-                        "suburb": "BRISBANE GROVE",
-                        "state": "NSW",
-                        "postcode": "2580",
-                        "country": "Australia",
-                        "doNotMail": false
-                    },
-                    "phone": {
-                        "phoneNumber": "0403258574",
-                        "doNotCall": false
-                    },
-                    "headOfHousehold": false,
-                    "homeOwner": false,
-                    "income": "0-13000",
-                    "peoplePerHousehold": "1",
-                    "directResponsive": false,
-                    "lastValidatedDate": "11/10/2013",
-                    "expirationDate": "15/03/2014",
-                    "lastModifiedDate": "14/03/2014"
-                },
-                {
-                    "propertyId": 3698774,
-                    "contactType": "Marketing",
-                    "person": {
-                        "firstName": "B",
-                        "middleNames": "",
-                        "initials": "B",
-                        "lastName": "Hunt"
-                    },
-                    "mailingAddress": {
-                        "careOf": "",
-                        "line1": "60 Early St",
-                        "line2": "",
-                        "suburb": "CRESTWOOD",
-                        "state": "NSW",
-                        "postcode": "2620",
-                        "country": "Australia",
-                        "doNotMail": false
-                    },
-                    "phone": {
-                        "phoneNumber": "",
-                        "doNotCall": true
-                    },
-                    "headOfHousehold": false,
-                    "homeOwner": false,
-                    "income": "52000-73000",
-                    "peoplePerHousehold": "3",
-                    "directResponsive": false,
-                    "lastValidatedDate": "01/11/2013",
-                    "expirationDate": "15/03/2014",
-                    "lastModifiedDate": "14/03/2014"
-                },
-                {
-                    "propertyId": 15793615,
-                    "contactType": "Marketing",
-                    "person": {
-                        "firstName": "Kathryn",
-                        "middleNames": "",
-                        "initials": "K",
-                        "lastName": "Alexander"
-                    },
-                    "mailingAddress": {
-                        "careOf": "",
-                        "line1": "104 Rous River Way",
-                        "line2": "",
-                        "suburb": "MURWILLUMBAH",
-                        "state": "NSW",
-                        "postcode": "2484",
-                        "country": "Australia",
-                        "doNotMail": false
-                    },
-                    "phone": {
-                        "phoneNumber": "",
-                        "doNotCall": true
-                    },
-                    "headOfHousehold": false,
-                    "gender": "F",
-                    "homeOwner": false,
-                    "income": "34000-52000",
-                    "peoplePerHousehold": "2",
-                    "directResponsive": false,
-                    "lastValidatedDate": "24/01/2014",
-                    "expirationDate": "15/03/2014",
-                    "lastModifiedDate": "14/03/2014"
-                },
-                {
-                    "propertyId": 15793615,
-                    "contactType": "Marketing",
-                    "person": {
-                        "firstName": "Lionel",
-                        "middleNames": "",
-                        "initials": "L",
-                        "lastName": "Alexander"
-                    },
-                    "mailingAddress": {
-                        "careOf": "",
-                        "line1": "104 Rous River Way",
-                        "line2": "",
-                        "suburb": "MURWILLUMBAH",
-                        "state": "NSW",
-                        "postcode": "2484",
-                        "country": "Australia",
-                        "doNotMail": false
-                    },
-                    "phone": {
-                        "phoneNumber": "",
-                        "doNotCall": true
-                    },
-                    "headOfHousehold": false,
-                    "gender": "M",
-                    "homeOwner": false,
-                    "age": "55-59",
-                    "income": "34000-52000",
-                    "peoplePerHousehold": "2",
-                    "directResponsive": false,
-                    "lastValidatedDate": "24/01/2014",
-                    "expirationDate": "15/03/2014",
-                    "lastModifiedDate": "14/03/2014"
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "marketingContacts": [
+        {
+          "propertyId": 1593403,
+          "contactType": "Marketing",
+          "person": {
+            "firstName": "Y",
+            "middleNames": "",
+            "initials": "Y",
+            "lastName": "Cai"
+          },
+          "mailingAddress": {
+            "careOf": "",
+            "line1": "5477 Braidwood Rd",
+            "line2": "",
+            "suburb": "BRISBANE GROVE",
+            "state": "NSW",
+            "postcode": "2580",
+            "country": "Australia",
+            "doNotMail": false
+          },
+          "phone": {
+            "phoneNumber": "0403258574",
+            "doNotCall": false
+          },
+          "headOfHousehold": false,
+          "homeOwner": false,
+          "income": "0-13000",
+          "peoplePerHousehold": "1",
+          "directResponsive": false,
+          "lastValidatedDate": "11/10/2013",
+          "expirationDate": "15/03/2014",
+          "lastModifiedDate": "14/03/2014"
+        },
+        {
+          "propertyId": 3698774,
+          "contactType": "Marketing",
+          "person": {
+            "firstName": "B",
+            "middleNames": "",
+            "initials": "B",
+            "lastName": "Hunt"
+          },
+          "mailingAddress": {
+            "careOf": "",
+            "line1": "60 Early St",
+            "line2": "",
+            "suburb": "CRESTWOOD",
+            "state": "NSW",
+            "postcode": "2620",
+            "country": "Australia",
+            "doNotMail": false
+          },
+          "phone": {
+            "phoneNumber": "",
+            "doNotCall": true
+          },
+          "headOfHousehold": false,
+          "homeOwner": false,
+          "income": "52000-73000",
+          "peoplePerHousehold": "3",
+          "directResponsive": false,
+          "lastValidatedDate": "01/11/2013",
+          "expirationDate": "15/03/2014",
+          "lastModifiedDate": "14/03/2014"
+        },
+        {
+          "propertyId": 15793615,
+          "contactType": "Marketing",
+          "person": {
+            "firstName": "Kathryn",
+            "middleNames": "",
+            "initials": "K",
+            "lastName": "Alexander"
+          },
+          "mailingAddress": {
+            "careOf": "",
+            "line1": "104 Rous River Way",
+            "line2": "",
+            "suburb": "MURWILLUMBAH",
+            "state": "NSW",
+            "postcode": "2484",
+            "country": "Australia",
+            "doNotMail": false
+          },
+          "phone": {
+            "phoneNumber": "",
+            "doNotCall": true
+          },
+          "headOfHousehold": false,
+          "gender": "F",
+          "homeOwner": false,
+          "income": "34000-52000",
+          "peoplePerHousehold": "2",
+          "directResponsive": false,
+          "lastValidatedDate": "24/01/2014",
+          "expirationDate": "15/03/2014",
+          "lastModifiedDate": "14/03/2014"
+        },
+        {
+          "propertyId": 15793615,
+          "contactType": "Marketing",
+          "person": {
+            "firstName": "Lionel",
+            "middleNames": "",
+            "initials": "L",
+            "lastName": "Alexander"
+          },
+          "mailingAddress": {
+            "careOf": "",
+            "line1": "104 Rous River Way",
+            "line2": "",
+            "suburb": "MURWILLUMBAH",
+            "state": "NSW",
+            "postcode": "2484",
+            "country": "Australia",
+            "doNotMail": false
+          },
+          "phone": {
+            "phoneNumber": "",
+            "doNotCall": true
+          },
+          "headOfHousehold": false,
+          "gender": "M",
+          "homeOwner": false,
+          "age": "55-59",
+          "income": "34000-52000",
+          "peoplePerHousehold": "2",
+          "directResponsive": false,
+          "lastValidatedDate": "24/01/2014",
+          "expirationDate": "15/03/2014",
+          "lastModifiedDate": "14/03/2014"
         }
+      ]
     }
+  }
 }</code></p>
 
 <p>Error:

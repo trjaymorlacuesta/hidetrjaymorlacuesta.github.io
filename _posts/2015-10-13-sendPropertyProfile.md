@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/sendPropertyProfile'
 title: 'sendPropertyProfile'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch the property profile report of a particular property;
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to fetch the property profile report of a particular property;
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -49,12 +55,6 @@ This call is used to fetch the property profile report of a particular property;
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -103,31 +103,31 @@ This call is used to fetch the property profile report of a particular property;
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=sendPropertyProfile&propertyId=7007111&email=dennis.salibio@tooltwist.com&firstname=dennis&surname=salibio&uid=TWISTUSER001&sid=2-4eed242594fc464787b8054ddc77de11&bedroom=1&bathroom=1&carspace=1
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+	"op": "sendPropertyProfile", 
+	"uid": "TWISTUSER001", 
+	"sid": "2-4eed242594fc464787b8054ddc77de11", 
+	"email": "dennis.salibio@tooltwist.com", 
+	"propertyId": "7007111", 
+	"firstname": "dennis", 
+	"surname": "salibio", 
+	"bedroom": "1", 
+	"bathroom": "1", 
+	"carspace": "1"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "response": "success",
-            "doneTransaction": true
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "response": "success",
+      "doneTransaction": true
     }
+  }
 }```
 
 Error:

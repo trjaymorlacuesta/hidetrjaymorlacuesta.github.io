@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getMobileAVMv3'
 title: 'getMobileAVMv3'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch live automated valuation model (AVM) for a property t
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to fetch live automated valuation model (AVM) for a property t
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -53,12 +59,6 @@ This call is used to fetch live automated valuation model (AVM) for a property t
 		
 	</tr>
 	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>propertyId</td>
 		<td>Property Id</td>
 		<td>Yes</td>
@@ -67,58 +67,52 @@ This call is used to fetch live automated valuation model (AVM) for a property t
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getMobileAVMv3&uid=TWISTUSER001&sid=2-4eed242594fc464787b8054ddc77de11&propertyId=7003499
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getMobileAVMv3",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "propertyId": "7003499"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "avmFaresDetail": {
-                "faresCode": "0",
-                "faresCondition": "SUCCESS",
-                "faresDescription": "SUCCESS",
-                "faresFSDScore": "8",
-                "faresReferenceId": "NSW:1446531200442-47484034",
-                "faresRunDate": "03/11/2015",
-                "faresScore": "90",
-                "faresValuationDate": "03/11/2015",
-                "faresValueEstimate": "1799385",
-                "faresValueHigh": "1937726",
-                "faresValueLow": "1661043",
-                "otmProperties": [
-                    "6312242",
-                    "6312333",
-                    "6313311",
-                    "6311902",
-                    "6313520",
-                    "6314108"
-                ],
-                "soldProperties": [
-                    "6312307",
-                    "6312935",
-                    "6313640",
-                    "6314504",
-                    "6313540",
-                    "6313676"
-                ]
-            }
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "avmFaresDetail": {
+        "faresCode": "0",
+        "faresCondition": "SUCCESS",
+        "faresDescription": "SUCCESS",
+        "faresFSDScore": "8",
+        "faresReferenceId": "NSW:1447398086765-47484034",
+        "faresRunDate": "13/11/2015",
+        "faresScore": "90",
+        "faresValuationDate": "13/11/2015",
+        "faresValueEstimate": "1798976",
+        "faresValueHigh": "1937281",
+        "faresValueLow": "1660672",
+        "otmProperties": [
+          "6313311",
+          "6312242",
+          "6312333",
+          "6313520",
+          "6314108",
+          "6311902"
+        ],
+        "soldProperties": [
+          "6312307",
+          "6312935",
+          "6314504",
+          "6313640",
+          "6313540",
+          "6313676"
+        ]
+      }
     }
+  }
 }```
 
 Error:

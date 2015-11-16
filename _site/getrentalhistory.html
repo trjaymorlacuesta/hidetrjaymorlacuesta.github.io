@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -31,6 +29,12 @@
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -42,12 +46,6 @@
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -66,61 +64,56 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&amp;op=getRentalHistory&amp;id=13093202&amp;maxResult=5&amp;sid=2-4eed242594fc464787b8054ddc77de11
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "getRentalHistory", 
+    "uid": "TWISTUSER003", 
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "id": "13093202", 
+    "maxResult": "5" 
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success",
-        "result": {
-            "listings": [
-                {
-                    "latestListedPrice": 450,
-                    "latestListDate": "28/11/2014",
-                    "agencyName": "Biggin &amp; Scott Real Estate Prahan",
-                    "agentName": "Tasha Rai"
-                },
-                {
-                    "latestListedPrice": 450,
-                    "latestListDate": "11/11/2014",
-                    "agencyName": "Biggin &amp; Scott - Toorak/Prahran",
-                    "agentName": "Tasha Rai"
-                },
-                {
-                    "latestListedPrice": 400,
-                    "latestListDate": "30/05/2014",
-                    "agencyName": "Biggin &amp; Scott Real Estate Prahan",
-                    "agentName": "Tasha Rai"
-                },
-                {
-                    "latestListedPrice": 450,
-                    "latestListDate": "13/02/2014",
-                    "agencyName": "Biggin &amp; Scott - Toorak/Prahran",
-                    "agentName": "Tasha Rai"
-                },
-                {
-                    "latestListedPrice": 450,
-                    "latestListDate": "06/11/2013",
-                    "agencyName": "Biggin &amp; Scott Real Estate Prahan",
-                    "agentName": "Martin Joughin"
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "listings": [
+        {
+          "latestListedPrice": 450,
+          "latestListDate": "28/11/2014",
+          "agencyName": "Biggin &amp; Scott Real Estate Prahan",
+          "agentName": "Tasha Rai"
+        },
+        {
+          "latestListedPrice": 450,
+          "latestListDate": "11/11/2014",
+          "agencyName": "Biggin &amp; Scott - Toorak/Prahran",
+          "agentName": "Tasha Rai"
+        },
+        {
+          "latestListedPrice": 400,
+          "latestListDate": "30/05/2014",
+          "agencyName": "Biggin &amp; Scott Real Estate Prahan",
+          "agentName": "Tasha Rai"
+        },
+        {
+          "latestListedPrice": 450,
+          "latestListDate": "13/02/2014",
+          "agencyName": "Biggin &amp; Scott - Toorak/Prahran",
+          "agentName": "Tasha Rai"
+        },
+        {
+          "latestListedPrice": 450,
+          "latestListDate": "06/11/2013",
+          "agencyName": "Biggin &amp; Scott Real Estate Prahan",
+          "agentName": "Martin Joughin"
         }
+      ]
     }
+  }
 }</code></p>
 
 <p>Error:

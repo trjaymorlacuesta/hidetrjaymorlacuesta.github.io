@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/sendEmailListingData'
 title: 'sendEmailListingData'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to provide the information of the given property id to the Otm
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to provide the information of the given property id to the Otm
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -49,12 +55,6 @@ This call is used to provide the information of the given property id to the Otm
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -103,27 +103,29 @@ This call is used to provide the information of the given property id to the Otm
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&op=sendEmailListingData&sid=2-4eed242594fc464787b8054ddc77de11&id=7007111&address=1%20Turramurra%20Avenue%20Turramurra%20NSW%202074&agentName=Robert%20Velasco&listingPriceFrom=200000&listingPriceTo=500000&listingDate=7/1/2010
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "sendEmailListingData", 
+    "uid": "TWISTUSER003", 
+    "sid": "2-4eed242594fc464787b8054ddc77de11", 
+    "id": "7007111", 
+    "address": "1 Turramurra Avenue Turramurra NSW 2074", 
+    "agentName": "Robert Velasco", 
+    "listingPriceFrom": "200000", 
+    "listingPriceTo": "500000", 
+    "listingDate": "7/1/2010"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success"
+  "response": {
+    "status": "success",
+    "result": {
+      "response": "true"
     }
+  }
 }```
 
 Error:

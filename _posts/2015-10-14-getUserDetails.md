@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getUserDetails'
 title: 'getUserDetails'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch the user details of a given sid. Returned data includ
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -40,6 +40,12 @@ This call is used to fetch the user details of a given sid. Returned data includ
 		<th>Required</th>
 		
 	</tr>
+    <tr>
+        <td>op</td>
+        <td>Operation</td>
+        <td>Yes</td>
+        
+    </tr>
 	<tr>
 		<td>uid</td>
 		<td>User ID</td>
@@ -52,37 +58,57 @@ This call is used to fetch the user details of a given sid. Returned data includ
 		<td>Yes</td>
 		
 	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-
-</tbody>
+    </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getUserDetails&uid=TWISTUSER001&sid=404-b9cae2209ddfbdf992e0ad54558716f3
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getUserDetails", 
+    "uid": "TWISTUSER001", 
+    "sid": "2-4eed242594fc464787b8054ddc77de11"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success"
+  "response": {
+    "status": "success",
+    "result": {
+      "personalInformation": {
+        "username": "tan.tran",
+        "title": "MR",
+        "firstName": "Tan",
+        "lastName": "Tran",
+        "phoneNumber": "07 33725766",
+        "mobileNumber": "",
+        "emailAddress": "ttn@rpdata.com",
+        "faxNumber": "",
+        "photo": ""
+      },
+      "workInformation": {
+        "emailAddress": "ttn@rpdata.com",
+        "mobileNumber": "007",
+        "phoneNumber": "",
+        "faxNumber": ""
+      },
+      "agencyInformation": {
+        "tradename": "Tan Tran - Staff Account",
+        "address1": "C/- RP DATA",
+        "address2": "",
+        "suburb": "CLAYFIELD",
+        "postcode": "4011",
+        "state": "QLD",
+        "country": "AUS",
+        "phoneNumber": "07 38574411",
+        "website": "",
+        "faxNumber": "07 38574896",
+        "industrySegment": "ST",
+        "franchiseId": 48,
+        "logo": "https://rpp.rpdata.com/rpp/images/logos/prdnational.gif"
+      }
     }
+  }
 }```
 
 Error:

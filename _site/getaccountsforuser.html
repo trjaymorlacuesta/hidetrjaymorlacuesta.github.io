@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -34,20 +32,14 @@
 		
 	</tr>
 	<tr>
-		<td>uid</td>
-		<td>User ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>sid</td>
-		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>op</td>
 		<td>Operation</td>
+		<td>Yes</td>
+		
+	</tr>
+	<tr>
+		<td>uid</td>
+		<td>User ID</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -66,35 +58,29 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER001&amp;op=getAccountsForUser&amp;user=bsguser.rpmob3.apple&amp;passwd=bsgdevpass
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "getAccountsForUser", 
+    "uid": "TWISTUSER001", 
+    "user": "bsguser.rpmob3.apple", 
+    "passwd": "bsgdevpass"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success",
-        "result": {
-            "customerList": [
-                {
-                    "customerName": "RPData-BSG Staging (National-NoVIC)",
-                    "customerId": "26233"
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "customerList": [
+        {
+          "customerName": "RPData-BSG Staging (National-NoVIC)",
+          "customerId": "26233"
         }
+      ]
     }
+  }
 }</code></p>
 
 <p>Error:

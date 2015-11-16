@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getMobileOwnerDetails'
 title: 'getMobileOwnerDetails'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch the owner details of a specific property; it uses the
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to fetch the owner details of a specific property; it uses the
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -53,12 +59,6 @@ This call is used to fetch the owner details of a specific property; it uses the
 		
 	</tr>
 	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>id</td>
 		<td>Property ID</td>
 		<td>Yes</td>
@@ -67,40 +67,34 @@ This call is used to fetch the owner details of a specific property; it uses the
 </tbody>
 </table>
 
-<div id="msgtesturl">
-	<table>
-		<tbody>
-		<tr>
-			<th>Test URL MSG Agent -MSGSIT:</th>
-		</tr>
-		<tr>
-			<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&op=getMobileOwnerDetails&id=7003499&sid=2-4eed242594fc464787b8054ddc77de11
-			</td>
-		</tr>
-	</tbody>
-	</table>
-</div>
+***Sample Request***
+```{
+    "op": "getMobileOwnerDetails",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "id": "7003499"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "ownerName": "LIN MA",
-            "ownerDetails": [
-                {
-                    "ownerName": "LIN MA",
-                    "ownerAddress": "56 MAXWELL ST SOUTH TURRAMURRA NSW 2074"
-                },
-                {
-                    "ownerName": "XI ZHAO",
-                    "ownerAddress": "56 MAXWELL ST SOUTH TURRAMURRA NSW 2074"
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "ownerName": "LIN MA",
+      "ownerDetails": [
+        {
+          "ownerName": "LIN MA",
+          "ownerAddress": "56 MAXWELL ST SOUTH TURRAMURRA NSW 2074"
+        },
+        {
+          "ownerName": "XI ZHAO",
+          "ownerAddress": "56 MAXWELL ST SOUTH TURRAMURRA NSW 2074"
         }
+      ]
     }
+  }
 }```
 
 Error:

@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getMobileAvm'
 title: 'getMobileAvm'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -32,7 +32,7 @@ If appCode is rpm3 is passed as appCode, it will avm service under BSGv3.
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -40,6 +40,12 @@ If appCode is rpm3 is passed as appCode, it will avm service under BSGv3.
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -55,12 +61,6 @@ If appCode is rpm3 is passed as appCode, it will avm service under BSGv3.
 		
 	</tr>
 	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>id</td>
 		<td>Property ID</td>
 		<td>Yes</td>
@@ -69,36 +69,30 @@ If appCode is rpm3 is passed as appCode, it will avm service under BSGv3.
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&op=getmobileavm&id=7003499&sid=2-4eed242594fc464787b8054ddc77de11
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getmobileavm", 
+    "uid": "TWISTUSER003", 
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "id": "7003499"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "fsdScore": 8,
-            "value": 1799385,
-            "high": 1937726,
-            "low": 1661043,
-            "salePrice": "",
-            "saleDate": "",
-            "propertyList": [ ]
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "fsdScore": 8,
+      "value": 1798976,
+      "high": 1937281,
+      "low": 1660672,
+      "salePrice": "",
+      "saleDate": "",
+      "propertyList": []
     }
+  }
 }```
 
 Error:

@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -31,6 +29,12 @@
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -46,12 +50,6 @@
 		
 	</tr>
 	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>id</td>
 		<td>Property ID</td>
 		<td>Yes</td>
@@ -60,40 +58,34 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-	<table>
-		<tbody>
-		<tr>
-			<th>Test URL MSG Agent -MSGSIT:</th>
-		</tr>
-		<tr>
-			<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&amp;op=getMobileOwnerDetails&amp;id=7003499&amp;sid=2-4eed242594fc464787b8054ddc77de11
-			</td>
-		</tr>
-	</tbody>
-	</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "getMobileOwnerDetails",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "id": "7003499"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success",
-        "result": {
-            "ownerName": "LIN MA",
-            "ownerDetails": [
-                {
-                    "ownerName": "LIN MA",
-                    "ownerAddress": "56 MAXWELL ST SOUTH TURRAMURRA NSW 2074"
-                },
-                {
-                    "ownerName": "XI ZHAO",
-                    "ownerAddress": "56 MAXWELL ST SOUTH TURRAMURRA NSW 2074"
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "ownerName": "LIN MA",
+      "ownerDetails": [
+        {
+          "ownerName": "LIN MA",
+          "ownerAddress": "56 MAXWELL ST SOUTH TURRAMURRA NSW 2074"
+        },
+        {
+          "ownerName": "XI ZHAO",
+          "ownerAddress": "56 MAXWELL ST SOUTH TURRAMURRA NSW 2074"
         }
+      ]
     }
+  }
 }</code></p>
 
 <p>Error:

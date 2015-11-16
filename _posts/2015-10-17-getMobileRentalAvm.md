@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getMobileRentalAvm'
 title: 'getMobileRentalAvm'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch rental automated valuation model (RAVM) for residenti
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to fetch rental automated valuation model (RAVM) for residenti
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -53,12 +59,6 @@ This call is used to fetch rental automated valuation model (RAVM) for residenti
 		
 	</tr>
 	<tr>
-		<td>op</td>
-		<td>Operation</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
 		<td>propertyId</td>
 		<td>Property Id</td>
 		<td>Yes</td>
@@ -67,49 +67,43 @@ This call is used to fetch rental automated valuation model (RAVM) for residenti
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getMobileRentalAvm&uid=TWISTUSER001&sid=2-4eed242594fc464787b8054ddc77de11&propertyId=3976640
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getMobileRentalAvm",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "propertyId": "3976640"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "rentalAvm": {
-                "rentalAvmEstimate": "1240",
-                "rentalAvmEstimateFsdScore": "41",
-                "rentalAvmEstimateHigh": "1747",
-                "rentalAvmEstimateLow": "733",
-                "rentalAvmPeriod": "W",
-                "rentalAvmRunDate": "03/11/2015",
-                "rentalAvmScore": "29",
-                "rentalAvmValuationDate": "26/10/2015",
-                "rentalAvmYield": "3.90",
-                "rentalAvmYieldFsdScore": "45",
-                "comparableProperties": [
-                    "3982980",
-                    "3983116",
-                    "3979948",
-                    "3987286",
-                    "3986359",
-                    "3987019"
-                ]
-            }
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "rentalAvm": {
+        "rentalAvmEstimate": "1230",
+        "rentalAvmEstimateFsdScore": "42",
+        "rentalAvmEstimateHigh": "1747",
+        "rentalAvmEstimateLow": "712",
+        "rentalAvmPeriod": "W",
+        "rentalAvmRunDate": "13/11/2015",
+        "rentalAvmScore": "29",
+        "rentalAvmValuationDate": "02/11/2015",
+        "rentalAvmYield": "3.86",
+        "rentalAvmYieldFsdScore": "46",
+        "comparableProperties": [
+          "3982980",
+          "3983116",
+          "3979948",
+          "3987019",
+          "3976917",
+          "3976809"
+        ]
+      }
     }
+  }
 }```
 
 Error:

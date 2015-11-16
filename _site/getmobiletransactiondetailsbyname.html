@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -31,6 +29,12 @@
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -42,12 +46,6 @@
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -114,51 +112,51 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-	<table>
-		<tbody>
-		<tr>
-			<th>Test URL MSG Agent -MSGSIT:</th>
-		</tr>
-		<tr>
-			<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER001&amp;sid=2-4eed242594fc464787b8054ddc77de11&amp;op=getMobileTransactionDetailsByName&amp;lastName=salway&amp;firstName=michael%20allan&amp;country=&amp;state=nsw&amp;country=AUS&amp;firstNameBeginsWith=false&amp;lastNameBeginsWith=false&amp;companyNameBeginsWith=&amp;false
-			</td>
-		</tr>
-	</tbody>
-	</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "getMobileTransactionDetailsByName",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "lastName": "salway",
+    "firstName": "michael allan",
+    "state": "nsw",
+    "country": "AUS",
+    "firstNameBeginsWith": "false",
+    "lastNameBeginsWith": "false",
+    "companyNameBeginsWith": "false"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success",
-        "result": {
-            "transactionDetailsList": [
-                {
-                    "propertyId": 5243888,
-                    "transferId": 52443719,
-                    "currentOwner": false
-                },
-                {
-                    "propertyId": 5243888,
-                    "transferId": 52443720,
-                    "currentOwner": false
-                },
-                {
-                    "propertyId": 7823008,
-                    "transferId": 0,
-                    "currentOwner": true
-                },
-                {
-                    "propertyId": 7823008,
-                    "transferId": 53701452,
-                    "currentOwner": false
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "transactionDetailsList": [
+        {
+          "propertyId": 5243888,
+          "transferId": 52443719,
+          "currentOwner": false
+        },
+        {
+          "propertyId": 5243888,
+          "transferId": 52443720,
+          "currentOwner": false
+        },
+        {
+          "propertyId": 7823008,
+          "transferId": 0,
+          "currentOwner": true
+        },
+        {
+          "propertyId": 7823008,
+          "transferId": 53701452,
+          "currentOwner": false
         }
+      ]
     }
+  }
 }</code></p>
 
 <p>Error:

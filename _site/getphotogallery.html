@@ -21,9 +21,7 @@
 
 <h3 id="request">Request</h3>
 
-<ul>
-  <li>The headers must include a <strong>valid authentication token</strong>.</li>
-</ul>
+<p><strong><em>Parameters</em></strong></p>
 
 <table>
 	<tbody>
@@ -31,6 +29,12 @@
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -42,12 +46,6 @@
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -66,59 +64,53 @@
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&amp;op=getphotogallery&amp;id=7007180&amp;sid=2-4eed242594fc464787b8054ddc77de11
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+<p><strong><em>Sample Request</em></strong>
+<code>{
+    "op": "getphotogallery",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "id": "7007180"
+}</code></p>
 
 <h3 id="response">Response</h3>
 
 <p>Success:
 <code>{
-    "response": {
-        "status": "success",
-        "result": {
-            "photos": [
-                {
-                    "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/09/11/06/16554835/16554835_1.JPG",
-                    "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/09/11/06/16554835/16554835_1.JPG",
-                    "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/09/11/06/16554835/16554835_1.JPG"
-                },
-                {
-                    "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/09/11/06/16554835/16554835_2.JPG",
-                    "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/09/11/06/16554835/16554835_2.JPG",
-                    "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/09/11/06/16554835/16554835_2.JPG"
-                },
-                {
-                    "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/09/11/06/16554835/16554835_3.JPG",
-                    "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/09/11/06/16554835/16554835_3.JPG",
-                    "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/09/11/06/16554835/16554835_3.JPG"
-                },
-                {
-                    "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/09/11/06/16554835/16554835_4.JPG",
-                    "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/09/11/06/16554835/16554835_4.JPG",
-                    "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/09/11/06/16554835/16554835_4.JPG"
-                },
-                {
-                    "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/04/07/19/NSW00925A/473.JPG",
-                    "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/04/07/19/NSW00925A/473.JPG",
-                    "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/04/07/19/NSW00925A/473.JPG"
-                }
-            ],
-            "aerialMap": "https://rpp.rpdata.com/rpmapAU/servlet/GenMap?mapView=AERIAL&amp;mapSource=NSW&amp;propertyId=47287106&amp;user=rpdata&amp;propertyPerimeter=true&amp;mapSize=560x420&amp;roads=true&amp;roadNames=true&amp;propertyNumbers=true&amp;lots=true&amp;propertyMeasurements=true&amp;water=true&amp;parks=true&amp;rails=true&amp;lotAreas=false",
-            "areaMap": "https://static.rpdata.com/rpdaAU/areamap/nsw/2074/turramurra.gif",
-            "topoMap": "https://rpp.rpdata.com/rpmapAU/servlet/GenMap?mapView=CADASTRE&amp;mapSource=NSW&amp;propertyId=47287106&amp;user=rpdata&amp;propertyPerimeter=true&amp;mapSize=560x420&amp;roads=true&amp;roadNames=true&amp;propertyNumbers=true&amp;lots=true&amp;propertyMeasurements=true&amp;water=true&amp;parks=true&amp;rails=true&amp;lotAreas=false&amp;lotPlan=false&amp;easements=false"
+  "response": {
+    "status": "success",
+    "result": {
+      "photos": [
+        {
+          "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/09/11/06/16554835/16554835_1.JPG",
+          "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/09/11/06/16554835/16554835_1.JPG",
+          "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/09/11/06/16554835/16554835_1.JPG"
+        },
+        {
+          "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/09/11/06/16554835/16554835_2.JPG",
+          "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/09/11/06/16554835/16554835_2.JPG",
+          "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/09/11/06/16554835/16554835_2.JPG"
+        },
+        {
+          "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/09/11/06/16554835/16554835_3.JPG",
+          "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/09/11/06/16554835/16554835_3.JPG",
+          "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/09/11/06/16554835/16554835_3.JPG"
+        },
+        {
+          "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/09/11/06/16554835/16554835_4.JPG",
+          "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/09/11/06/16554835/16554835_4.JPG",
+          "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/09/11/06/16554835/16554835_4.JPG"
+        },
+        {
+          "smallImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/320x215/04/07/19/NSW00925A/473.JPG",
+          "mediumImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/470x313/04/07/19/NSW00925A/473.JPG",
+          "largeImageDisplayURL": "https://static.rpdata.com/rpdaAU/photo/listsale/768x512/04/07/19/NSW00925A/473.JPG"
         }
+      ],
+      "aerialMap": "https://rpp.rpdata.com/rpmapAU/servlet/GenMap?mapView=AERIAL&amp;mapSource=NSW&amp;propertyId=47287106&amp;user=rpdata&amp;propertyPerimeter=true&amp;mapSize=560x420&amp;roads=true&amp;roadNames=true&amp;propertyNumbers=true&amp;lots=true&amp;propertyMeasurements=true&amp;water=true&amp;parks=true&amp;rails=true&amp;lotAreas=false",
+      "areaMap": "https://static.rpdata.com/rpdaAU/areamap/nsw/2074/turramurra.gif",
+      "topoMap": "https://rpp.rpdata.com/rpmapAU/servlet/GenMap?mapView=CADASTRE&amp;mapSource=NSW&amp;propertyId=47287106&amp;user=rpdata&amp;propertyPerimeter=true&amp;mapSize=560x420&amp;roads=true&amp;roadNames=true&amp;propertyNumbers=true&amp;lots=true&amp;propertyMeasurements=true&amp;water=true&amp;parks=true&amp;rails=true&amp;lotAreas=false&amp;lotPlan=false&amp;easements=false"
     }
+  }
 }</code></p>
 
 <p>Error:

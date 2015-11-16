@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getOTMHistory'
 title: 'getOTMHistory'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch the for sale history of a specific property; it uses 
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to fetch the for sale history of a specific property; it uses 
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -49,12 +55,6 @@ This call is used to fetch the for sale history of a specific property; it uses 
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -73,49 +73,44 @@ This call is used to fetch the for sale history of a specific property; it uses 
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?uid=TWISTUSER003&op=getOTMHistory&id=4890425&maxResult=5&sid=2-4eed242594fc464787b8054ddc77de11
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getOTMHistory",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "id": "4890425",
+    "maxResult": "5"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "listings": [
-                {
-                    "latestListedPrice": 0,
-                    "latestListedPriceDescription": "PRICE GUIDE OVER $975,000",
-                    "latestListDate": "12/12/2010",
-                    "listingTypeDescription": "Auction",
-                    "daysListed": 20,
-                    "agencyName": "Mcgrath - Leichhardt",
-                    "agentName": "Kate Webster"
-                },
-                {
-                    "latestListedPrice": 345000,
-                    "latestListedPriceDescription": "",
-                    "latestListDate": "07/06/1997",
-                    "listingTypeDescription": "Normal Sale",
-                    "daysListed": 1,
-                    "agencyName": "Raine & Horne N'Town",
-                    "agentName": ""
-                }
-            ]
+  "response": {
+    "status": "success",
+    "result": {
+      "listings": [
+        {
+          "latestListedPrice": 0,
+          "latestListedPriceDescription": "PRICE GUIDE OVER $975,000",
+          "latestListDate": "12/12/2010",
+          "listingTypeDescription": "Auction",
+          "daysListed": 20,
+          "agencyName": "Mcgrath - Leichhardt",
+          "agentName": "Kate Webster"
+        },
+        {
+          "latestListedPrice": 345000,
+          "latestListedPriceDescription": "",
+          "latestListDate": "07/06/1997",
+          "listingTypeDescription": "Normal Sale",
+          "daysListed": 1,
+          "agencyName": "Raine & Horne N'Town",
+          "agentName": ""
         }
+      ]
     }
+  }
 }```
 
 Error:

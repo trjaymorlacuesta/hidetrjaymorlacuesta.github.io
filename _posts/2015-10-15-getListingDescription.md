@@ -2,7 +2,7 @@
 category: Web Service Calls
 path: '/msg/getListingDescription'
 title: 'getListingDescription'
-type: 'GET'
+type: 'POST'
 
 layout: nil
 ---
@@ -30,7 +30,7 @@ This call is used to fetch the advertisement listing description fields coming f
 
 ### Request
 
-* The headers must include a **valid authentication token**.
+***Parameters***
 
 <table>
 	<tbody>
@@ -38,6 +38,12 @@ This call is used to fetch the advertisement listing description fields coming f
 		<th>Parameter</th>
 		<th>Description</th>
 		<th>Required</th>
+		
+	</tr>
+	<tr>
+		<td>op</td>
+		<td>Operation</td>
+		<td>Yes</td>
 		
 	</tr>
 	<tr>
@@ -49,12 +55,6 @@ This call is used to fetch the advertisement listing description fields coming f
 	<tr>
 		<td>sid</td>
 		<td>Session ID</td>
-		<td>Yes</td>
-		
-	</tr>
-	<tr>
-		<td>op</td>
-		<td>Operation</td>
 		<td>Yes</td>
 		
 	</tr>
@@ -73,53 +73,47 @@ This call is used to fetch the advertisement listing description fields coming f
 </tbody>
 </table>
 
-<div id="msgtesturl">
-<table>
-	<tbody>
-	<tr>
-		<th>Test URL MSG Agent -MSGSIT:</th>
-	</tr>
-	<tr>
-		<td>http://msgsit.rpdata.com/ttsvr/msgdebug?op=getListingDescription&uid=TWISTUSER001&sid=2-4eed242594fc464787b8054ddc77de11&propertyId=7267327
-		</td>
-	</tr>
-</tbody>
-</table>
-</div>
+***Sample Request***
+```{
+    "op": "getListingDescription",
+    "uid": "TWISTUSER001",
+    "sid": "2-4eed242594fc464787b8054ddc77de11",
+    "propertyId": "7267327"
+}```
 
 ### Response
 
 Success:
 ```{
-    "response": {
-        "status": "success",
-        "result": {
-            "advertisementList": {
-                "description": "AFFORDABLE FAMILY HOME<BR>THIS TIDY 3 BEDROOM HOME OFFERS AFFORDABLE LIVING IDEAL FOR A SMALL FAMILY. POLISHED FLOORBOARDS THROUGHOUT LIVING AND DINING AREA. UPDATED KITCHEN. OUTDOOR DECK AND COURTYARD FOR ENTERTAINING. SMALL TERRACED REAR YARD. GARAGE AND ADDITIONAL STUDIO ROOM UNDERNEATH. QUIET STREET, CLOSE TO PRE-SCHOOL, SHORT DISTANCE TO LAKE, PUBLIC JETTY AND LOCAL CLUB. PET/S: SORRY THIS PROPERTY IS NOT SUITABLE FOR PETS ARRANGING TO VIEW A PROPERTY WE PRIDE OURSELVES ON OFFERING A QUALITY SERVICE AND ASSISTING YOU TO FIND THE RIGHT RENTAL PROPERTY. YOU WON'T BE SUBJECT TO INCONVENIENT & IMPERSONAL OPEN HOUSE INSPECTIONS. OUR AUTOMATED BOOKING SYSTEM WILL ASSIST YOU WITH A HASSLE FREE APPROACH TO VIEWING PROPERTIES + KEEP YOU INFORMED DURING THE PROCESS OF APPLYING FOR TENANCY. IF YOU REQUIRE ANY FURTHER INFORMATION OR ASSISTANCE, PLEASE EMAIL OUR OFFICE OR PHONE.. WE WILL BE HAPPY TO ASSIST YOU. PH. 02 4950 4900",
-                "id": "1244920",
-                "type": "FORRENT",
-                "date": "10/11/2014",
-                "method": "Rental",
-                "period": "W",
-                "price": "340",
-                "priceDescription": "$340 PER WEEK",
-                "advertiserList": [
-                    {
-                        "companyName": "",
-                        "agencyPhoneNumber": "",
-                        "agent": "Melanie Bieler",
-                        "agentPhoneNumber": ""
-                    },
-                    {
-                        "companyName": "Keys Real Estate",
-                        "agencyPhoneNumber": "(02) 4950 4900",
-                        "agent": "Mel Bieler",
-                        "agentPhoneNumber": "(02) 4950 4900"
-                    }
-                ]
-            }
-        }
+  "response": {
+    "status": "success",
+    "result": {
+      "advertisementList": {
+        "description": "AFFORDABLE FAMILY HOME<BR>THIS TIDY 3 BEDROOM HOME OFFERS AFFORDABLE LIVING IDEAL FOR A SMALL FAMILY.  POLISHED FLOORBOARDS THROUGHOUT LIVING AND DINING AREA. UPDATED KITCHEN.  OUTDOOR DECK AND COURTYARD FOR ENTERTAINING. SMALL TERRACED REAR YARD.  GARAGE AND ADDITIONAL STUDIO ROOM UNDERNEATH.  QUIET STREET, CLOSE TO PRE-SCHOOL, SHORT DISTANCE TO LAKE, PUBLIC JETTY AND LOCAL CLUB.  PET/S: SORRY THIS PROPERTY IS NOT SUITABLE FOR PETS  ARRANGING TO VIEW A PROPERTY WE PRIDE OURSELVES ON OFFERING A QUALITY SERVICE AND ASSISTING YOU TO FIND THE RIGHT RENTAL PROPERTY. YOU WON'T BE SUBJECT TO INCONVENIENT & IMPERSONAL OPEN HOUSE INSPECTIONS.  OUR AUTOMATED BOOKING SYSTEM WILL ASSIST YOU WITH A HASSLE FREE APPROACH TO VIEWING PROPERTIES + KEEP YOU INFORMED DURING THE PROCESS OF APPLYING FOR TENANCY.  IF YOU REQUIRE ANY FURTHER INFORMATION OR ASSISTANCE, PLEASE EMAIL OUR OFFICE OR PHONE.. WE WILL BE HAPPY TO ASSIST YOU.  PH. 02 4950 4900",
+        "id": "1244920",
+        "type": "FORRENT",
+        "date": "10/11/2014",
+        "method": "Rental",
+        "period": "W",
+        "price": "340",
+        "priceDescription": "$340 PER WEEK",
+        "advertiserList": [
+          {
+            "companyName": "",
+            "agencyPhoneNumber": "",
+            "agent": "Melanie Bieler",
+            "agentPhoneNumber": ""
+          },
+          {
+            "companyName": "Keys Real Estate",
+            "agencyPhoneNumber": "(02) 4950 4900",
+            "agent": "Mel Bieler",
+            "agentPhoneNumber": "(02) 4950 4900"
+          }
+        ]
+      }
     }
+  }
 }```
 
 Error:
