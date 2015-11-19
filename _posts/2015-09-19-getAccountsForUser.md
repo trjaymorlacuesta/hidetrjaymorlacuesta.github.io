@@ -28,6 +28,15 @@ This method takes userName and password input and returns all active customer id
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getCustomersForUser](http://confluence.rpdata.local/display/BA/Method_getCustomersForUser)
+* [Method_generateIntegratorAuthToken](http://confluence.rpdata.local/display/BA/Method_generateIntegratorAuthToken)
+* [Method_getCredentialsForSessionToken](http://confluence.rpdata.local/display/BA/Method_getCredentialsForSessionToken)
+* [Method_getCustomersForUser](http://confluence.rpdata.local/display/BA/Method_getCustomersForUser)
+
 ### Request
 
 ***Parameters***

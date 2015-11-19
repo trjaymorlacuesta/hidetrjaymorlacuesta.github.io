@@ -28,6 +28,22 @@ This call is used to fetch the different statistics, charts and statuses that ar
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getStatisticsForRegion](http://confluence.rpdata.local/display/BA/Method_getStatisticsForRegion)
+* [Method_getHouseholdStructure](http://confluence.rpdata.local/display/BA/Method_getHouseholdStructure)
+* [Method_getYearlyMedianPrices](http://confluence.rpdata.local/display/BA/Method_getYearlyMedianPrices)
+* [Method_getYearlyMedianPrices](http://confluence.rpdata.local/display/BA/Method_getYearlyMedianPrices)
+* [Method_getMonthlyMedianPrices](http://confluence.rpdata.local/display/BA/Method_getMonthlyMedianPrices)
+* [Method_getCapitalGrowth](http://confluence.rpdata.local/display/BA/Method_getCapitalGrowth)
+* [Method_getSalesByNumberChartURL](http://confluence.rpdata.local/display/BA/Method_getSalesByNumberChartURL)
+* [Method_getSalesByPriceChartURL](http://confluence.rpdata.local/display/BA/Method_getSalesByPriceChartURL)
+* [Method_getMonthlyMedianPricesChartURL](http://confluence.rpdata.local/display/BA/Method_getMonthlyMedianPricesChartURL)
+* [Method_getYearlyMedianPricesChartURL](http://confluence.rpdata.local/display/BA/Method_getYearlyMedianPricesChartURL)
+* [Method_getSuburbStatistics](http://confluence.rpdata.local/display/BA/Method_getSuburbStatistics)
+
 ### Request
 
 ***Parameters***

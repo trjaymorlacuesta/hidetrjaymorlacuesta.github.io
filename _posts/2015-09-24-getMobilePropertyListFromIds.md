@@ -30,6 +30,13 @@ When the showAdditionalDataElements is true, it will use the BSGv3's property se
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getPropertyIdListFromSuggestion](http://confluence.rpdata.local/display/BA/Method_getPropertyIdListFromSuggestion)
+* [Method_search](http://confluence.rpdata.local/display/BA/Method_search)
+
 ### Request
 
 ***Parameters***

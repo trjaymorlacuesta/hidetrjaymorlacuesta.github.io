@@ -28,6 +28,15 @@ This call is used to fetch all property details that are categories as sale reco
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getSuggestionList](http://confluence.rpdata.local/display/BA/Method_getSuggestionList)
+* [Method_getPropertyIdListFromSuggestion](http://confluence.rpdata.local/display/BA/Method_getPropertyIdListFromSuggestion)
+* [Method_refineProperties](http://confluence.rpdata.local/display/BA/Method_refineProperties)
+* [Method_getPropertySummaryList](http://confluence.rpdata.local/display/BA/Method_getPropertySummaryList)
+
 ### Request
 
 ***Parameters***

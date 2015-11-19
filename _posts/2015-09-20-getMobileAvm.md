@@ -30,6 +30,16 @@ If appCode is rpm3 is passed as appCode, it will avm service under BSGv3.
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getAVM](http://confluence.rpdata.local/display/BA/Method_getAVM)
+* [Method_getPropertySummaryList](http://confluence.rpdata.local/display/BA/Method_getPropertySummaryList)
+* [Method_getOtmPropertySummaryList](http://confluence.rpdata.local/display/BA/Method_getOtmPropertySummaryList)
+* [Method_getPropertySummaryList](http://confluence.rpdata.local/display/BA/Method_getPropertySummaryList)
+* [Method_search](http://confluence.rpdata.local/display/BA/Method_search)
+
 ### Request
 
 ***Parameters***
