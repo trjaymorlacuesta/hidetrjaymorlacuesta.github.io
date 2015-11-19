@@ -28,6 +28,12 @@ This call is used to fetch the timeline of a particular property.
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Property Detail Service](http://confluence.rpdata.local/display/BA/Property+Detail+Service)
+
 ### Request
 
 ***Parameters***

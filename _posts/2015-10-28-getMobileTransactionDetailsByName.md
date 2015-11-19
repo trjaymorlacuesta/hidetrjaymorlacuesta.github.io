@@ -28,6 +28,12 @@ This call will return transactions' transfer and related property information fo
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getTransactionDetailsByName](http://confluence.rpdata.local/display/BA/Method_getTransactionDetailsByName)
+
 ### Request
 
 ***Parameters***

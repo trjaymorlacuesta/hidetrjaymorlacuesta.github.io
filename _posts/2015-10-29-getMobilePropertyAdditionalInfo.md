@@ -28,6 +28,12 @@ This call is used when the property details need to append the other fields comi
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Property Detail Service](http://confluence.rpdata.local/display/BA/Property+Detail+Service)
+
 ### Request 
 
 ***Parameters***
