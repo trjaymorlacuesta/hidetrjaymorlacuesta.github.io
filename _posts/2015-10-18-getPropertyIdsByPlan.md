@@ -28,6 +28,12 @@ This method will return a list of property ids from a search string suggestion a
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getPropertyIdListFromSuggestion](http://confluence.rpdata.local/display/BA/Method_getPropertyIdListFromSuggestion)
+
 ### Request
 
 ***Parameters***

@@ -28,6 +28,12 @@ This call is used to fetch the advertisement listing description fields coming f
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Advertisements](http://confluence.rpdata.local/display/BA/Advertisements)
+
 ### Request
 
 ***Parameters***

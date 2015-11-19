@@ -20,13 +20,20 @@ This call is used to fetch the for sale history of a specific property; it uses 
 		<th>Show Additional Data Elements</th>
 	</tr>
 	<tr>
-		<td>No</td>
 		<td>Yes</td>
+		<td>No</td>
 		<td></td>
 	</tr>
 
 </tbody>
 </table>
+
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Property Detail Service](http://confluence.rpdata.local/display/BA/Property+Detail+Service)
+* [Property For Sale Advertisements](http://confluence.rpdata.local/display/BA/Property+For+Sale+Advertisements)
 
 ### Request
 

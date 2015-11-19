@@ -28,6 +28,12 @@ This call is used to obtain summary statistics and/or detailed property informat
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_search](http://confluence.rpdata.local/display/BA/Method_search)
+
 ### Request
 
 ***Parameters***

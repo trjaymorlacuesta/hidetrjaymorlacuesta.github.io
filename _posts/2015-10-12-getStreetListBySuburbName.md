@@ -28,6 +28,12 @@ This call is used to fetch the street list under the given suburb; it uses BSGv2
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getStreetList](http://confluence.rpdata.local/display/BA/Method_getStreetList)
+
 ### Request
 
 ***Parameters***

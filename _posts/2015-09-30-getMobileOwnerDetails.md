@@ -28,6 +28,12 @@ This call is used to fetch the owner details of a specific property; it uses the
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getPropertyDetail](http://confluence.rpdata.local/display/BA/Method_getPropertyDetail)
+
 ### Request
 
 ***Parameters***

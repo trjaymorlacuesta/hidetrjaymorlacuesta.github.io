@@ -28,6 +28,12 @@ This call is used to fetch the user details of a given sid. Returned data includ
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getAllUserDetails](http://confluence.rpdata.local/display/BA/Method_getAllUserDetails)
+
 ### Request
 
 ***Parameters***

@@ -28,6 +28,12 @@ This call is used to provide the information of the given property id to the Aae
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getPropertyDetail](http://confluence.rpdata.local/display/BA/Method_getPropertyDetail)
+
 ### Request
 
 ***Parameters***

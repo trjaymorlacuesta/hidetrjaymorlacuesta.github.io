@@ -28,6 +28,12 @@ This call is used to fetch the photos, aerial map, area map and topo map of the 
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getPhotos](http://confluence.rpdata.local/display/BA/Method_getPhotos)
+
 ### Request
 
 ***Parameters***

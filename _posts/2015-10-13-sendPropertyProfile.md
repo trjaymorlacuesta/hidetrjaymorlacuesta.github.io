@@ -28,6 +28,12 @@ This call is used to fetch the property profile report of a particular property;
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getPropertyProfile](http://confluence.rpdata.local/display/BA/Method_getPropertyProfile)
+
 ### Request
 
 ***Parameters***

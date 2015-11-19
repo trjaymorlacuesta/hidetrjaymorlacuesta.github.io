@@ -28,6 +28,12 @@ This call is used to fetch the rental avm report of a particular property; it us
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Profile Service](http://confluence.rpdata.local/display/BA/Profile+Service)
+
 ### Request
 
 ***Parameters***

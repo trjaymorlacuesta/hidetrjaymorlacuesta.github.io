@@ -28,6 +28,12 @@ This call is used to fetch rental automated valuation model (RAVM) for residenti
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Rental AVM Service](http://confluence.rpdata.local/display/BA/Rental+AVM+Service)
+
 ### Request
 
 ***Parameters***

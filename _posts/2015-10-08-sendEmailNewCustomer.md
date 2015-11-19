@@ -20,8 +20,8 @@ This call is used to provide the given information to the Websales team.
 		<th>Show Additional Data Elements</th>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>No</td>
+		<td>No</td>
 		<td>&nbsp;</td>
 	</tr>
 

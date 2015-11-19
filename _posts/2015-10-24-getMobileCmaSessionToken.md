@@ -20,8 +20,8 @@ This call is used to generate a session token and by pass the login procedures o
 		<th>Show Additional Data Elements</th>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td>No</td>
+		<td>No</td>
 		<td>&nbsp;</td>
 	</tr>
 

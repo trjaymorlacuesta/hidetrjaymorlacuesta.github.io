@@ -28,6 +28,12 @@ This call is used when trying to access the marketing contact information.
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Marketing Contacts Service](http://confluence.rpdata.local/display/BA/Marketing+Contacts+Service)
+
 ### Request
 
 ***Parameters***

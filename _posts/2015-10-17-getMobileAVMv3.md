@@ -28,6 +28,12 @@ This call is used to fetch live automated valuation model (AVM) for a property t
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [AVM Service](http://confluence.rpdata.local/display/BA/AVM+Service)
+
 ### Request
 
 ***Parameters***

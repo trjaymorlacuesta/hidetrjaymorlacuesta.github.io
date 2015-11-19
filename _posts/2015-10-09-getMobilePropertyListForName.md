@@ -28,6 +28,12 @@ This method returns a list of property summary records for an owner's name; it u
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getPropertySummaryListByNameSuburb](http://confluence.rpdata.local/display/BA/Method_getPropertySummaryListByNameSuburb)
+
 ### Request
 
 ***Parameters***

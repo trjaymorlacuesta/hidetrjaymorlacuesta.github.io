@@ -20,13 +20,19 @@ This call is used to fetch the avm report of a particular property; it uses the 
 		<th>Show Additional Data Elements</th>
 	</tr>
 	<tr>
-		<td>Yes</td>
 		<td>No</td>
+		<td>Yes</td>
 		<td></td>
 	</tr>
 
 </tbody>
 </table>
+
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Method_getPDFAVM](http://confluence.rpdata.local/display/BA/Method_getPDFAVM)
 
 ### Request
 

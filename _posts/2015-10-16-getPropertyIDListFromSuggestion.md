@@ -28,6 +28,12 @@ This call is used to fetch suggestion list that matches the search term; it uses
 </tbody>
 </table>
 
+### Additional Information
+
+For further reading regarding BSG Elements: 
+
+* [Suggest Service](http://confluence.rpdata.local/display/BA/Suggest+Service)
+
 ### Request
 
 ***Parameters***
